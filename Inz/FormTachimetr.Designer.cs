@@ -89,7 +89,7 @@
             this.tableAdapterManager.DlugosciTableAdapter = null;
             this.tableAdapterManager.KatyTableAdapter = null;
             this.tableAdapterManager.PunktyNieznaneTableAdapter = null;
-            this.tableAdapterManager.TableTableAdapter = null;
+
             this.tableAdapterManager.TachimetrTableAdapter = this.tachimetrTableAdapter;
             this.tableAdapterManager.UpdateOrder = Inz.Database1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.WspolrzedneTableAdapter = null;

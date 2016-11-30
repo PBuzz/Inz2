@@ -45,5 +45,69 @@ namespace Inz.Properties {
                 this["bladkierunkucc"] = value;
             }
         }
+        
+        /// <summary>
+        /// Ścieżka do pliku z modelem geoidy w formacie B L ksi
+        /// </summary>
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.SettingsDescriptionAttribute("Ścieżka do pliku z modelem geoidy w formacie B L ksi")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\Piotrek\\Desktop\\gugik-geoid2011.txt")]
+        public string sciezkageoidy {
+            get {
+                return ((string)(this["sciezkageoidy"]));
+            }
+            set {
+                this["sciezkageoidy"] = value;
+            }
+        }
+        
+        /// <summary>
+        /// Półoś równikowa a
+        /// </summary>
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.SettingsDescriptionAttribute("Półoś równikowa a")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("6378137")]
+        public double elipsoida_a {
+            get {
+                return ((double)(this["elipsoida_a"]));
+            }
+            set {
+                this["elipsoida_a"] = value;
+            }
+        }
+        
+        /// <summary>
+        /// Półoś biegunowa b
+        /// </summary>
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.SettingsDescriptionAttribute("Półoś biegunowa b")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("6356752.3142452")]
+        public double elipsoida_b {
+            get {
+                return ((double)(this["elipsoida_b"]));
+            }
+            set {
+                this["elipsoida_b"] = value;
+            }
+        }
+        
+        /// <summary>
+        /// Spłaszczenie elipsoidy 1/f
+        /// </summary>
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.SettingsDescriptionAttribute("Spłaszczenie elipsoidy 1/f")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("298.257223563")]
+        public double elipsoida_f {
+            get {
+                return ((double)(this["elipsoida_f"]));
+            }
+            set {
+                this["elipsoida_f"] = value;
+            }
+        }
     }
 }

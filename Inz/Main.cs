@@ -100,22 +100,7 @@ namespace Inz
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            MdiClient ctlMDI;
-            foreach (Control ctl in this.Controls)
-            {
-                try
-                {
-                    // Attempt to cast the control to type MdiClient.
-                    ctlMDI = (MdiClient)ctl;
-
-                    // Set the BackColor of the MdiClient control.
-                    ctlMDI.BackColor = this.BackColor;
-                }
-                catch (InvalidCastException exc)
-                {
-                    // Catch and ignore the error if casting failed.
-                }
-            }
+            
         }
 
         private void testToolStripMenuItem_Click(object sender, EventArgs e)
@@ -143,6 +128,20 @@ namespace Inz
             Form ustawienia = new FormUstawienia();
             ustawienia.MdiParent = this;
             ustawienia.Show();
+        }
+
+        private void azymutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form wczytajwektor = new FormWczytajWektor();
+            wczytajwektor.MdiParent = this;
+            wczytajwektor.Show();
+        }
+
+        private void test2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form testy2 = new FormTest2();
+            testy2.MdiParent = this;
+            testy2.Show();
         }
     }
 }

@@ -12,7 +12,8 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <PublishUrl>publikuj\</PublishUrl>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Opublikowane\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -22,10 +23,10 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationRevision>1</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -46,6 +47,18 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>705ACB437CE649200C542FAE05CF6977C5C290A5</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Inz_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MathNet.Numerics, Version=3.13.1.0, Culture=neutral, processorArchitecture=MSIL">
@@ -73,6 +86,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Database1DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FormDodajBLH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDodajBLH.Designer.cs">
+      <DependentUpon>FormDodajBLH.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormSzkic.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,11 +104,23 @@
     <Compile Include="FormTest.Designer.cs">
       <DependentUpon>FormTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTest2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTest2.Designer.cs">
+      <DependentUpon>FormTest2.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUstawienia.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormUstawienia.Designer.cs">
       <DependentUpon>FormUstawienia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormWczytajWektor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWczytajWektor.Designer.cs">
+      <DependentUpon>FormWczytajWektor.cs</DependentUpon>
     </Compile>
     <Compile Include="Odczyt.cs" />
     <Compile Include="Main.cs">
@@ -133,11 +164,20 @@
     <Compile Include="Transformacja.cs" />
     <Compile Include="Wspprzyb.cs" />
     <Compile Include="XYZ.cs" />
+    <EmbeddedResource Include="FormDodajBLH.resx">
+      <DependentUpon>FormDodajBLH.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormSzkic.resx">
       <DependentUpon>FormSzkic.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormTest2.resx">
+      <DependentUpon>FormTest2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormUstawienia.resx">
       <DependentUpon>FormUstawienia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWczytajWektor.resx">
+      <DependentUpon>FormWczytajWektor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
@@ -180,6 +220,7 @@
     <None Include="Database1DataSet.xss">
       <DependentUpon>Database1DataSet.xsd</DependentUpon>
     </None>
+    <None Include="Inz_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

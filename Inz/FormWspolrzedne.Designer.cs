@@ -53,11 +53,14 @@
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.wspolrzedneBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.wspolrzedneBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.menuStripwspolrzedne = new System.Windows.Forms.MenuStrip();
+            this.dodajBLHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.wspolrzedneBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wspolrzedneDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wspolrzedneBindingNavigator)).BeginInit();
             this.wspolrzedneBindingNavigator.SuspendLayout();
+            this.menuStripwspolrzedne.SuspendLayout();
             this.SuspendLayout();
             // 
             // wspolrzedneBindingSource
@@ -80,9 +83,9 @@
             this.tableAdapterManager.DlugosciTableAdapter = null;
             this.tableAdapterManager.KatyTableAdapter = null;
             this.tableAdapterManager.PunktyNieznaneTableAdapter = null;
-            this.tableAdapterManager.TableTableAdapter = null;
             this.tableAdapterManager.TachimetrTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Inz.Database1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.WektoryTableAdapter = null;
             this.tableAdapterManager.WspolrzedneTableAdapter = this.wspolrzedneTableAdapter;
             // 
             // wspolrzedneDataGridView
@@ -97,9 +100,9 @@
             this.Staly});
             this.wspolrzedneDataGridView.DataSource = this.wspolrzedneBindingSource;
             this.wspolrzedneDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.wspolrzedneDataGridView.Location = new System.Drawing.Point(0, 25);
+            this.wspolrzedneDataGridView.Location = new System.Drawing.Point(0, 49);
             this.wspolrzedneDataGridView.Name = "wspolrzedneDataGridView";
-            this.wspolrzedneDataGridView.Size = new System.Drawing.Size(549, 415);
+            this.wspolrzedneDataGridView.Size = new System.Drawing.Size(549, 391);
             this.wspolrzedneDataGridView.TabIndex = 1;
             this.wspolrzedneDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.wspolrzedneDataGridView_DataError);
             // 
@@ -246,7 +249,7 @@
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
             this.wspolrzedneBindingNavigatorSaveItem});
-            this.wspolrzedneBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.wspolrzedneBindingNavigator.Location = new System.Drawing.Point(0, 24);
             this.wspolrzedneBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.wspolrzedneBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.wspolrzedneBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -257,6 +260,24 @@
             this.wspolrzedneBindingNavigator.TabIndex = 0;
             this.wspolrzedneBindingNavigator.Text = "bindingNavigator1";
             // 
+            // menuStripwspolrzedne
+            // 
+            this.menuStripwspolrzedne.AllowMerge = false;
+            this.menuStripwspolrzedne.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dodajBLHToolStripMenuItem});
+            this.menuStripwspolrzedne.Location = new System.Drawing.Point(0, 0);
+            this.menuStripwspolrzedne.Name = "menuStripwspolrzedne";
+            this.menuStripwspolrzedne.Size = new System.Drawing.Size(549, 24);
+            this.menuStripwspolrzedne.TabIndex = 2;
+            this.menuStripwspolrzedne.Text = "menuStrip1";
+            // 
+            // dodajBLHToolStripMenuItem
+            // 
+            this.dodajBLHToolStripMenuItem.Name = "dodajBLHToolStripMenuItem";
+            this.dodajBLHToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
+            this.dodajBLHToolStripMenuItem.Text = "Dodaj BLH";
+            this.dodajBLHToolStripMenuItem.Click += new System.EventHandler(this.dodajBLHToolStripMenuItem_Click);
+            // 
             // FormWspolrzedne
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -264,6 +285,8 @@
             this.ClientSize = new System.Drawing.Size(549, 440);
             this.Controls.Add(this.wspolrzedneDataGridView);
             this.Controls.Add(this.wspolrzedneBindingNavigator);
+            this.Controls.Add(this.menuStripwspolrzedne);
+            this.MainMenuStrip = this.menuStripwspolrzedne;
             this.Name = "FormWspolrzedne";
             this.Text = "FormWspolrzedne";
             this.Load += new System.EventHandler(this.FormWspolrzedne_Load);
@@ -273,6 +296,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.wspolrzedneBindingNavigator)).EndInit();
             this.wspolrzedneBindingNavigator.ResumeLayout(false);
             this.wspolrzedneBindingNavigator.PerformLayout();
+            this.menuStripwspolrzedne.ResumeLayout(false);
+            this.menuStripwspolrzedne.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -303,5 +328,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn KolumnaY;
         private System.Windows.Forms.DataGridViewTextBoxColumn KolumnaH;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Staly;
+        private System.Windows.Forms.MenuStrip menuStripwspolrzedne;
+        private System.Windows.Forms.ToolStripMenuItem dodajBLHToolStripMenuItem;
     }
 }

@@ -13,5 +13,17 @@
     <Setting Name="bladkierunkucc" Type="System.Double" Scope="User">
       <Value Profile="(Default)">20</Value>
     </Setting>
+    <Setting Name="sciezkageoidy" Description="Ścieżka do pliku z modelem geoidy w formacie B L ksi" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\Piotrek\Desktop\gugik-geoid2011.txt</Value>
+    </Setting>
+    <Setting Name="elipsoida_a" Description="Półoś równikowa a" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">6378137</Value>
+    </Setting>
+    <Setting Name="elipsoida_b" Description="Półoś biegunowa b" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">6356752.3142452</Value>
+    </Setting>
+    <Setting Name="elipsoida_f" Description="Spłaszczenie elipsoidy 1/f" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">298.257223563</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

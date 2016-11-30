@@ -32,6 +32,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.plikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.otwórzToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ustawieniaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.wspołrzędneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kątyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.długościToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,7 +44,7 @@
             this.database1DataSet = new Inz.Database1DataSet();
             this.tachimetrBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tachimetrTableAdapter = new Inz.Database1DataSetTableAdapters.TachimetrTableAdapter();
-            this.ustawieniaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.test2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tachimetrBindingSource)).BeginInit();
@@ -58,7 +59,8 @@
             this.długościToolStripMenuItem,
             this.tachimetrToolStripMenuItem,
             this.testToolStripMenuItem,
-            this.azymutToolStripMenuItem});
+            this.azymutToolStripMenuItem,
+            this.test2ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1066, 24);
@@ -77,9 +79,16 @@
             // otwórzToolStripMenuItem
             // 
             this.otwórzToolStripMenuItem.Name = "otwórzToolStripMenuItem";
-            this.otwórzToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.otwórzToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.otwórzToolStripMenuItem.Text = "Otwórz";
             this.otwórzToolStripMenuItem.Click += new System.EventHandler(this.otwórzToolStripMenuItem_Click);
+            // 
+            // ustawieniaToolStripMenuItem
+            // 
+            this.ustawieniaToolStripMenuItem.Name = "ustawieniaToolStripMenuItem";
+            this.ustawieniaToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.ustawieniaToolStripMenuItem.Text = "Ustawienia";
+            this.ustawieniaToolStripMenuItem.Click += new System.EventHandler(this.ustawieniaToolStripMenuItem_Click);
             // 
             // wspołrzędneToolStripMenuItem
             // 
@@ -93,6 +102,7 @@
             this.kątyToolStripMenuItem.Name = "kątyToolStripMenuItem";
             this.kątyToolStripMenuItem.Size = new System.Drawing.Size(42, 20);
             this.kątyToolStripMenuItem.Text = "Kąty";
+            this.kątyToolStripMenuItem.Visible = false;
             this.kątyToolStripMenuItem.Click += new System.EventHandler(this.kątyToolStripMenuItem_Click);
             // 
             // długościToolStripMenuItem
@@ -100,6 +110,7 @@
             this.długościToolStripMenuItem.Name = "długościToolStripMenuItem";
             this.długościToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.długościToolStripMenuItem.Text = "Długości";
+            this.długościToolStripMenuItem.Visible = false;
             this.długościToolStripMenuItem.Click += new System.EventHandler(this.długościToolStripMenuItem_Click);
             // 
             // tachimetrToolStripMenuItem
@@ -119,8 +130,9 @@
             // azymutToolStripMenuItem
             // 
             this.azymutToolStripMenuItem.Name = "azymutToolStripMenuItem";
-            this.azymutToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
-            this.azymutToolStripMenuItem.Text = "Azymut";
+            this.azymutToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
+            this.azymutToolStripMenuItem.Text = "Wektory GPS";
+            this.azymutToolStripMenuItem.Click += new System.EventHandler(this.azymutToolStripMenuItem_Click);
             // 
             // statusStrip1
             // 
@@ -148,12 +160,12 @@
             // 
             this.tachimetrTableAdapter.ClearBeforeFill = true;
             // 
-            // ustawieniaToolStripMenuItem
+            // test2ToolStripMenuItem
             // 
-            this.ustawieniaToolStripMenuItem.Name = "ustawieniaToolStripMenuItem";
-            this.ustawieniaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.ustawieniaToolStripMenuItem.Text = "Ustawienia";
-            this.ustawieniaToolStripMenuItem.Click += new System.EventHandler(this.ustawieniaToolStripMenuItem_Click);
+            this.test2ToolStripMenuItem.Name = "test2ToolStripMenuItem";
+            this.test2ToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
+            this.test2ToolStripMenuItem.Text = "Test2";
+            this.test2ToolStripMenuItem.Click += new System.EventHandler(this.test2ToolStripMenuItem_Click);
             // 
             // Main
             // 
@@ -194,6 +206,7 @@
         private Database1DataSetTableAdapters.TachimetrTableAdapter tachimetrTableAdapter;
         private System.Windows.Forms.ToolStripMenuItem azymutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ustawieniaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem test2ToolStripMenuItem;
     }
 }
 

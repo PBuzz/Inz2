@@ -46,5 +46,17 @@ namespace Inz
         {
             MessageBox.Show("Tylko cyfry");
         }
+
+        private void dodajBLHToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.wspolrzedneBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.database1DataSet);
+            Form dodajblh = new FormDodajBLH();
+            dodajblh.Show();
+            dodajblh.MdiParent = this.MdiParent;
+        }
+
+
     }
 }
