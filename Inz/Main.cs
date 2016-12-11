@@ -143,5 +143,12 @@ namespace Inz
             testy2.MdiParent = this;
             testy2.Show();
         }
+
+        private void rinexToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form rinex1 = new FormRinex();
+            rinex1.MdiParent = this;
+            rinex1.Show();
+        }
     }
 }

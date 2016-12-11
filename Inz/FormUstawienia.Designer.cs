@@ -31,6 +31,10 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tBrtklib = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.tBConfig = new System.Windows.Forms.TextBox();
             this.buttonsave = new System.Windows.Forms.Button();
             this.Tab1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -47,6 +51,9 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.propertyGrid1 = new System.Windows.Forms.PropertyGrid();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.label8 = new System.Windows.Forms.Label();
+            this.tBoutput = new System.Windows.Forms.TextBox();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.Tab1.SuspendLayout();
@@ -64,13 +71,21 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.numericUpDown1, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label6, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.tBrtklib, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label7, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label8, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.tBoutput, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.tBConfig, 1, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(2, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(295, 313);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -95,6 +110,43 @@
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown1.TabIndex = 1;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(4, 33);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(101, 13);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Lokalizacja rnx2rtkp";
+            // 
+            // tBrtklib
+            // 
+            this.tBrtklib.Location = new System.Drawing.Point(151, 30);
+            this.tBrtklib.Name = "tBrtklib";
+            this.tBrtklib.Size = new System.Drawing.Size(140, 20);
+            this.tBrtklib.TabIndex = 3;
+            this.tBrtklib.DoubleClick += new System.EventHandler(this.textBox1_DoubleClick);
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(4, 57);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(66, 13);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Rtklib config";
+            // 
+            // tBConfig
+            // 
+            this.tBConfig.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tBConfig.Location = new System.Drawing.Point(151, 56);
+            this.tBConfig.Name = "tBConfig";
+            this.tBConfig.Size = new System.Drawing.Size(140, 20);
+            this.tBConfig.TabIndex = 5;
+            this.tBConfig.DoubleClick += new System.EventHandler(this.textBox1_DoubleClick_1);
             // 
             // buttonsave
             // 
@@ -274,6 +326,25 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(4, 81);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(66, 13);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "outputFolder";
+            // 
+            // tBoutput
+            // 
+            this.tBoutput.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tBoutput.Location = new System.Drawing.Point(151, 79);
+            this.tBoutput.Name = "tBoutput";
+            this.tBoutput.Size = new System.Drawing.Size(140, 20);
+            this.tBoutput.TabIndex = 7;
+            this.tBoutput.DoubleClick += new System.EventHandler(this.tBoutput_DoubleClick);
+            // 
             // FormUstawienia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -318,5 +389,12 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.PropertyGrid propertyGrid1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox tBrtklib;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox tBConfig;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox tBoutput;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
     }
 }

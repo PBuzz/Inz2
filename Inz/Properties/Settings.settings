@@ -25,5 +25,17 @@
     <Setting Name="elipsoida_f" Description="Spłaszczenie elipsoidy 1/f" Type="System.Double" Scope="User">
       <Value Profile="(Default)">298.257223563</Value>
     </Setting>
+    <Setting Name="rtklibPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\rtklib\rtklib_2.4.2\bin\rnx2rtkp.exe</Value>
+    </Setting>
+    <Setting Name="wynikirtklib" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\wyniki z rtkliba</Value>
+    </Setting>
+    <Setting Name="config" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Projekty C\dane\konfig.conf</Value>
+    </Setting>
+    <Setting Name="outputPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Praca_Inz\rtklib Wyniki</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -22,6 +22,9 @@ namespace Inz
             tBa.Text = ust.elipsoida_a.ToString("N5");
             tBb.Text = ust.elipsoida_b.ToString("N5");
             tBf.Text = ust.elipsoida_f.ToString("N5");
+            tBConfig.Text = ust.config.ToString();
+            tBrtklib.Text = ust.rtklibPath.ToString();
+            tBoutput.Text = ust.outputPath.ToString();
             propertyGrid1.SelectedObject = Properties.Settings.Default;
         }
 
@@ -46,8 +49,9 @@ namespace Inz
             Properties.Settings.Default.elipsoida_a = Convert.ToDouble(tBa.Text);
                 Properties.Settings.Default.elipsoida_b= Convert.ToDouble(tBb.Text);
             Properties.Settings.Default.elipsoida_f= Convert.ToDouble(tBf.Text);
-
-
+            Properties.Settings.Default.rtklibPath = tBrtklib.Text;
+            Properties.Settings.Default.config = tBConfig.Text;
+            Properties.Settings.Default.outputPath = tBoutput.Text;
         }
 
         private void textBox4_DoubleClick(object sender, EventArgs e)
@@ -68,6 +72,33 @@ namespace Inz
         {
             propertyGrid1.SelectedObject = Properties.Settings.Default;
         }
-        
+
+        private void textBox1_DoubleClick(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                tBrtklib.Text = openFileDialog1.FileName;
+
+            }
+        }
+
+        private void textBox1_DoubleClick_1(object sender, EventArgs e)
+        {
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                tBConfig.Text = openFileDialog1.FileName;
+
+            }
+        }
+
+        private void tBoutput_DoubleClick(object sender, EventArgs e)
+        {
+            if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
+            {
+                tBoutput.Text = folderBrowserDialog1.SelectedPath;
+
+            }
+        }
     }
 }

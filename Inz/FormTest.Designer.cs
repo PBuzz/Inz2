@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTest));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.database1DataSet = new Inz.Database1DataSet();
             this.punktyNieznaneBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.punktyNieznaneTableAdapter = new Inz.Database1DataSetTableAdapters.PunktyNieznaneTableAdapter();
@@ -54,6 +54,7 @@
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.tSBSzkic = new System.Windows.Forms.ToolStripButton();
             this.punktyNieznaneDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
@@ -71,7 +72,6 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.tSBSzkic = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.punktyNieznaneBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.punktyNieznaneBindingNavigator)).BeginInit();
@@ -107,8 +107,9 @@
             this.tableAdapterManager.DlugosciTableAdapter = null;
             this.tableAdapterManager.KatyTableAdapter = null;
             this.tableAdapterManager.PunktyNieznaneTableAdapter = this.punktyNieznaneTableAdapter;
-           this.tableAdapterManager.TachimetrTableAdapter = null;
+            this.tableAdapterManager.TachimetrTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Inz.Database1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.WektoryTableAdapter = null;
             this.tableAdapterManager.WspolrzedneTableAdapter = null;
             // 
             // punktyNieznaneBindingNavigator
@@ -141,7 +142,7 @@
             this.punktyNieznaneBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.punktyNieznaneBindingNavigator.Name = "punktyNieznaneBindingNavigator";
             this.punktyNieznaneBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.punktyNieznaneBindingNavigator.Size = new System.Drawing.Size(821, 25);
+            this.punktyNieznaneBindingNavigator.Size = new System.Drawing.Size(862, 25);
             this.punktyNieznaneBindingNavigator.TabIndex = 0;
             this.punktyNieznaneBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -269,6 +270,16 @@
             this.toolStripButton3.Text = "Wyrównanie";
             this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
+            // tSBSzkic
+            // 
+            this.tSBSzkic.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tSBSzkic.Image = ((System.Drawing.Image)(resources.GetObject("tSBSzkic.Image")));
+            this.tSBSzkic.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tSBSzkic.Name = "tSBSzkic";
+            this.tSBSzkic.Size = new System.Drawing.Size(23, 22);
+            this.tSBSzkic.Text = "Rysuj szkic";
+            this.tSBSzkic.Click += new System.EventHandler(this.tSBSzkic_Click);
+            // 
             // punktyNieznaneDataGridView
             // 
             this.punktyNieznaneDataGridView.AutoGenerateColumns = false;
@@ -285,7 +296,7 @@
             this.punktyNieznaneDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.punktyNieznaneDataGridView.Location = new System.Drawing.Point(3, 3);
             this.punktyNieznaneDataGridView.Name = "punktyNieznaneDataGridView";
-            this.punktyNieznaneDataGridView.Size = new System.Drawing.Size(807, 524);
+            this.punktyNieznaneDataGridView.Size = new System.Drawing.Size(848, 524);
             this.punktyNieznaneDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn2
@@ -309,24 +320,24 @@
             // X
             // 
             this.X.DataPropertyName = "X";
-            dataGridViewCellStyle5.NullValue = null;
-            this.X.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.NullValue = null;
+            this.X.DefaultCellStyle = dataGridViewCellStyle1;
             this.X.HeaderText = "X";
             this.X.Name = "X";
             // 
             // Y
             // 
             this.Y.DataPropertyName = "Y";
-            dataGridViewCellStyle6.NullValue = null;
-            this.Y.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.NullValue = null;
+            this.Y.DefaultCellStyle = dataGridViewCellStyle2;
             this.Y.HeaderText = "Y";
             this.Y.Name = "Y";
             // 
             // H
             // 
             this.H.DataPropertyName = "H";
-            dataGridViewCellStyle7.Format = "N3";
-            this.H.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Format = "N3";
+            this.H.DefaultCellStyle = dataGridViewCellStyle3;
             this.H.HeaderText = "H";
             this.H.Name = "H";
             // 
@@ -355,7 +366,7 @@
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(807, 524);
+            this.dataGridView1.Size = new System.Drawing.Size(848, 524);
             this.dataGridView1.TabIndex = 2;
             // 
             // tabControl1
@@ -367,7 +378,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 25);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(821, 556);
+            this.tabControl1.Size = new System.Drawing.Size(862, 556);
             this.tabControl1.TabIndex = 3;
             // 
             // tabPage1
@@ -376,7 +387,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(813, 530);
+            this.tabPage1.Size = new System.Drawing.Size(854, 530);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Punkty do wyrównania";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -387,7 +398,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(813, 530);
+            this.tabPage2.Size = new System.Drawing.Size(854, 530);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Macierz A";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -398,7 +409,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(813, 530);
+            this.tabPage3.Size = new System.Drawing.Size(854, 530);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Współrzędne wyrównane";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -406,37 +417,27 @@
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.Format = "N3";
-            dataGridViewCellStyle8.NullValue = null;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.Format = "N3";
+            dataGridViewCellStyle4.NullValue = null;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView2.Location = new System.Drawing.Point(3, 3);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(807, 524);
+            this.dataGridView2.Size = new System.Drawing.Size(848, 524);
             this.dataGridView2.TabIndex = 0;
-            // 
-            // tSBSzkic
-            // 
-            this.tSBSzkic.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tSBSzkic.Image = ((System.Drawing.Image)(resources.GetObject("tSBSzkic.Image")));
-            this.tSBSzkic.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tSBSzkic.Name = "tSBSzkic";
-            this.tSBSzkic.Size = new System.Drawing.Size(23, 22);
-            this.tSBSzkic.Text = "Rysuj szkic";
-            this.tSBSzkic.Click += new System.EventHandler(this.tSBSzkic_Click);
             // 
             // FormTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(821, 581);
+            this.ClientSize = new System.Drawing.Size(862, 581);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.punktyNieznaneBindingNavigator);
             this.Name = "FormTest";

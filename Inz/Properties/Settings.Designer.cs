@@ -109,5 +109,53 @@ namespace Inz.Properties {
                 this["elipsoida_f"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\rtklib\\rtklib_2.4.2\\bin\\rnx2rtkp.exe")]
+        public string rtklibPath {
+            get {
+                return ((string)(this["rtklibPath"]));
+            }
+            set {
+                this["rtklibPath"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\wyniki z rtkliba")]
+        public string wynikirtklib {
+            get {
+                return ((string)(this["wynikirtklib"]));
+            }
+            set {
+                this["wynikirtklib"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Projekty C\\dane\\konfig.conf")]
+        public string config {
+            get {
+                return ((string)(this["config"]));
+            }
+            set {
+                this["config"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Praca_Inz\\rtklib Wyniki")]
+        public string outputPath {
+            get {
+                return ((string)(this["outputPath"]));
+            }
+            set {
+                this["outputPath"] = value;
+            }
+        }
     }
 }

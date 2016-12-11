@@ -36,6 +36,12 @@ namespace Inz {
         
         private WektoryDataTable tableWektory;
         
+        private TransformacjaDataTable tableTransformacja;
+        
+        private Wektory2DataTable tableWektory2;
+        
+        private RinexDataTable tableRinex;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -81,6 +87,15 @@ namespace Inz {
                 }
                 if ((ds.Tables["Wektory"] != null)) {
                     base.Tables.Add(new WektoryDataTable(ds.Tables["Wektory"]));
+                }
+                if ((ds.Tables["Transformacja"] != null)) {
+                    base.Tables.Add(new TransformacjaDataTable(ds.Tables["Transformacja"]));
+                }
+                if ((ds.Tables["Wektory2"] != null)) {
+                    base.Tables.Add(new Wektory2DataTable(ds.Tables["Wektory2"]));
+                }
+                if ((ds.Tables["Rinex"] != null)) {
+                    base.Tables.Add(new RinexDataTable(ds.Tables["Rinex"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -157,6 +172,36 @@ namespace Inz {
         public WektoryDataTable Wektory {
             get {
                 return this.tableWektory;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public TransformacjaDataTable Transformacja {
+            get {
+                return this.tableTransformacja;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public Wektory2DataTable Wektory2 {
+            get {
+                return this.tableWektory2;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public RinexDataTable Rinex {
+            get {
+                return this.tableRinex;
             }
         }
         
@@ -245,6 +290,15 @@ namespace Inz {
                 if ((ds.Tables["Wektory"] != null)) {
                     base.Tables.Add(new WektoryDataTable(ds.Tables["Wektory"]));
                 }
+                if ((ds.Tables["Transformacja"] != null)) {
+                    base.Tables.Add(new TransformacjaDataTable(ds.Tables["Transformacja"]));
+                }
+                if ((ds.Tables["Wektory2"] != null)) {
+                    base.Tables.Add(new Wektory2DataTable(ds.Tables["Wektory2"]));
+                }
+                if ((ds.Tables["Rinex"] != null)) {
+                    base.Tables.Add(new RinexDataTable(ds.Tables["Rinex"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -314,6 +368,24 @@ namespace Inz {
                     this.tableWektory.InitVars();
                 }
             }
+            this.tableTransformacja = ((TransformacjaDataTable)(base.Tables["Transformacja"]));
+            if ((initTable == true)) {
+                if ((this.tableTransformacja != null)) {
+                    this.tableTransformacja.InitVars();
+                }
+            }
+            this.tableWektory2 = ((Wektory2DataTable)(base.Tables["Wektory2"]));
+            if ((initTable == true)) {
+                if ((this.tableWektory2 != null)) {
+                    this.tableWektory2.InitVars();
+                }
+            }
+            this.tableRinex = ((RinexDataTable)(base.Tables["Rinex"]));
+            if ((initTable == true)) {
+                if ((this.tableRinex != null)) {
+                    this.tableRinex.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -336,6 +408,12 @@ namespace Inz {
             base.Tables.Add(this.tableWspolrzedne);
             this.tableWektory = new WektoryDataTable();
             base.Tables.Add(this.tableWektory);
+            this.tableTransformacja = new TransformacjaDataTable();
+            base.Tables.Add(this.tableTransformacja);
+            this.tableWektory2 = new Wektory2DataTable();
+            base.Tables.Add(this.tableWektory2);
+            this.tableRinex = new RinexDataTable();
+            base.Tables.Add(this.tableRinex);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -371,6 +449,24 @@ namespace Inz {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerializeWektory() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeTransformacja() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeWektory2() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeRinex() {
             return false;
         }
         
@@ -446,6 +542,15 @@ namespace Inz {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void WektoryRowChangeEventHandler(object sender, WektoryRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void TransformacjaRowChangeEventHandler(object sender, TransformacjaRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void Wektory2RowChangeEventHandler(object sender, Wektory2RowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void RinexRowChangeEventHandler(object sender, RinexRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -2139,6 +2244,10 @@ namespace Inz {
             
             private global::System.Data.DataColumn columnDZ;
             
+            private global::System.Data.DataColumn columnwczytane;
+            
+            private global::System.Data.DataColumn columnniewczytane;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public WektoryDataTable() {
@@ -2294,6 +2403,22 @@ namespace Inz {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn wczytaneColumn {
+                get {
+                    return this.columnwczytane;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn niewczytaneColumn {
+                get {
+                    return this.columnniewczytane;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2329,7 +2454,23 @@ namespace Inz {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public WektoryRow AddWektoryRow(string Wczytaj, double sdx, double sdy, double sdz, double sdxy, double sdyz, double sdzx, double ratio, string sciezka, string poczatek, string koniec, double DX, double DY, double DZ) {
+            public WektoryRow AddWektoryRow(
+                        string Wczytaj, 
+                        double sdx, 
+                        double sdy, 
+                        double sdz, 
+                        double sdxy, 
+                        double sdyz, 
+                        double sdzx, 
+                        double ratio, 
+                        string sciezka, 
+                        string poczatek, 
+                        string koniec, 
+                        double DX, 
+                        double DY, 
+                        double DZ, 
+                        int wczytane, 
+                        int niewczytane) {
                 WektoryRow rowWektoryRow = ((WektoryRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Wczytaj,
@@ -2346,7 +2487,9 @@ namespace Inz {
                         koniec,
                         DX,
                         DY,
-                        DZ};
+                        DZ,
+                        wczytane,
+                        niewczytane};
                 rowWektoryRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowWektoryRow);
                 return rowWektoryRow;
@@ -2391,6 +2534,8 @@ namespace Inz {
                 this.columnDX = base.Columns["DX"];
                 this.columnDY = base.Columns["DY"];
                 this.columnDZ = base.Columns["DZ"];
+                this.columnwczytane = base.Columns["wczytane"];
+                this.columnniewczytane = base.Columns["niewczytane"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2426,6 +2571,10 @@ namespace Inz {
                 base.Columns.Add(this.columnDY);
                 this.columnDZ = new global::System.Data.DataColumn("DZ", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDZ);
+                this.columnwczytane = new global::System.Data.DataColumn("wczytane", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnwczytane);
+                this.columnniewczytane = new global::System.Data.DataColumn("niewczytane", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnniewczytane);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnWczytaj.DefaultValue = ((string)("Wczytaj"));
@@ -2524,6 +2673,1234 @@ namespace Inz {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "WektoryDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class TransformacjaDataTable : global::System.Data.TypedTableBase<TransformacjaRow> {
+            
+            private global::System.Data.DataColumn columnX;
+            
+            private global::System.Data.DataColumn columnY;
+            
+            private global::System.Data.DataColumn columnZ;
+            
+            private global::System.Data.DataColumn columnB;
+            
+            private global::System.Data.DataColumn columnH;
+            
+            private global::System.Data.DataColumn columnL;
+            
+            private global::System.Data.DataColumn columnXgk;
+            
+            private global::System.Data.DataColumn columnYgk;
+            
+            private global::System.Data.DataColumn columnksi;
+            
+            private global::System.Data.DataColumn columneta;
+            
+            private global::System.Data.DataColumn columnxt;
+            
+            private global::System.Data.DataColumn columnyt;
+            
+            private global::System.Data.DataColumn columnzt;
+            
+            private global::System.Data.DataColumn columnNazwa;
+            
+            private global::System.Data.DataColumn columnId;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TransformacjaDataTable() {
+                this.TableName = "Transformacja";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal TransformacjaDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected TransformacjaDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn XColumn {
+                get {
+                    return this.columnX;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn YColumn {
+                get {
+                    return this.columnY;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ZColumn {
+                get {
+                    return this.columnZ;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn BColumn {
+                get {
+                    return this.columnB;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn HColumn {
+                get {
+                    return this.columnH;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn LColumn {
+                get {
+                    return this.columnL;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn XgkColumn {
+                get {
+                    return this.columnXgk;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn YgkColumn {
+                get {
+                    return this.columnYgk;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ksiColumn {
+                get {
+                    return this.columnksi;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn etaColumn {
+                get {
+                    return this.columneta;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn xtColumn {
+                get {
+                    return this.columnxt;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ytColumn {
+                get {
+                    return this.columnyt;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ztColumn {
+                get {
+                    return this.columnzt;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NazwaColumn {
+                get {
+                    return this.columnNazwa;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn IdColumn {
+                get {
+                    return this.columnId;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TransformacjaRow this[int index] {
+                get {
+                    return ((TransformacjaRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event TransformacjaRowChangeEventHandler TransformacjaRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event TransformacjaRowChangeEventHandler TransformacjaRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event TransformacjaRowChangeEventHandler TransformacjaRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event TransformacjaRowChangeEventHandler TransformacjaRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddTransformacjaRow(TransformacjaRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TransformacjaRow AddTransformacjaRow(double X, double Y, double Z, double B, double H, double L, double Xgk, double Ygk, double ksi, double eta, double xt, double yt, double zt, string Nazwa) {
+                TransformacjaRow rowTransformacjaRow = ((TransformacjaRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        X,
+                        Y,
+                        Z,
+                        B,
+                        H,
+                        L,
+                        Xgk,
+                        Ygk,
+                        ksi,
+                        eta,
+                        xt,
+                        yt,
+                        zt,
+                        Nazwa,
+                        null};
+                rowTransformacjaRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowTransformacjaRow);
+                return rowTransformacjaRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TransformacjaRow FindById(int Id) {
+                return ((TransformacjaRow)(this.Rows.Find(new object[] {
+                            Id})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                TransformacjaDataTable cln = ((TransformacjaDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new TransformacjaDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnX = base.Columns["X"];
+                this.columnY = base.Columns["Y"];
+                this.columnZ = base.Columns["Z"];
+                this.columnB = base.Columns["B"];
+                this.columnH = base.Columns["H"];
+                this.columnL = base.Columns["L"];
+                this.columnXgk = base.Columns["Xgk"];
+                this.columnYgk = base.Columns["Ygk"];
+                this.columnksi = base.Columns["ksi"];
+                this.columneta = base.Columns["eta"];
+                this.columnxt = base.Columns["xt"];
+                this.columnyt = base.Columns["yt"];
+                this.columnzt = base.Columns["zt"];
+                this.columnNazwa = base.Columns["Nazwa"];
+                this.columnId = base.Columns["Id"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnX = new global::System.Data.DataColumn("X", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnX);
+                this.columnY = new global::System.Data.DataColumn("Y", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnY);
+                this.columnZ = new global::System.Data.DataColumn("Z", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnZ);
+                this.columnB = new global::System.Data.DataColumn("B", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnB);
+                this.columnH = new global::System.Data.DataColumn("H", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnH);
+                this.columnL = new global::System.Data.DataColumn("L", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnL);
+                this.columnXgk = new global::System.Data.DataColumn("Xgk", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnXgk);
+                this.columnYgk = new global::System.Data.DataColumn("Ygk", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnYgk);
+                this.columnksi = new global::System.Data.DataColumn("ksi", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnksi);
+                this.columneta = new global::System.Data.DataColumn("eta", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columneta);
+                this.columnxt = new global::System.Data.DataColumn("xt", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnxt);
+                this.columnyt = new global::System.Data.DataColumn("yt", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnyt);
+                this.columnzt = new global::System.Data.DataColumn("zt", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnzt);
+                this.columnNazwa = new global::System.Data.DataColumn("Nazwa", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNazwa);
+                this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnId);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnId}, true));
+                this.columnNazwa.MaxLength = 2147483647;
+                this.columnId.AutoIncrement = true;
+                this.columnId.AutoIncrementSeed = -1;
+                this.columnId.AutoIncrementStep = -1;
+                this.columnId.AllowDBNull = false;
+                this.columnId.ReadOnly = true;
+                this.columnId.Unique = true;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TransformacjaRow NewTransformacjaRow() {
+                return ((TransformacjaRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new TransformacjaRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(TransformacjaRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.TransformacjaRowChanged != null)) {
+                    this.TransformacjaRowChanged(this, new TransformacjaRowChangeEvent(((TransformacjaRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.TransformacjaRowChanging != null)) {
+                    this.TransformacjaRowChanging(this, new TransformacjaRowChangeEvent(((TransformacjaRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.TransformacjaRowDeleted != null)) {
+                    this.TransformacjaRowDeleted(this, new TransformacjaRowChangeEvent(((TransformacjaRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.TransformacjaRowDeleting != null)) {
+                    this.TransformacjaRowDeleting(this, new TransformacjaRowChangeEvent(((TransformacjaRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveTransformacjaRow(TransformacjaRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                Database1DataSet ds = new Database1DataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "TransformacjaDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class Wektory2DataTable : global::System.Data.TypedTableBase<Wektory2Row> {
+            
+            private global::System.Data.DataColumn columnId;
+            
+            private global::System.Data.DataColumn columnPoczatek;
+            
+            private global::System.Data.DataColumn columnKoniec;
+            
+            private global::System.Data.DataColumn columnDX;
+            
+            private global::System.Data.DataColumn columnDY;
+            
+            private global::System.Data.DataColumn columnDZ;
+            
+            private global::System.Data.DataColumn columnzrodlo;
+            
+            private global::System.Data.DataColumn columnx;
+            
+            private global::System.Data.DataColumn columny;
+            
+            private global::System.Data.DataColumn columnz;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Wektory2DataTable() {
+                this.TableName = "Wektory2";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal Wektory2DataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected Wektory2DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn IdColumn {
+                get {
+                    return this.columnId;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn PoczatekColumn {
+                get {
+                    return this.columnPoczatek;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn KoniecColumn {
+                get {
+                    return this.columnKoniec;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DXColumn {
+                get {
+                    return this.columnDX;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DYColumn {
+                get {
+                    return this.columnDY;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DZColumn {
+                get {
+                    return this.columnDZ;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn zrodloColumn {
+                get {
+                    return this.columnzrodlo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn xColumn {
+                get {
+                    return this.columnx;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn yColumn {
+                get {
+                    return this.columny;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn zColumn {
+                get {
+                    return this.columnz;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Wektory2Row this[int index] {
+                get {
+                    return ((Wektory2Row)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event Wektory2RowChangeEventHandler Wektory2RowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event Wektory2RowChangeEventHandler Wektory2RowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event Wektory2RowChangeEventHandler Wektory2RowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event Wektory2RowChangeEventHandler Wektory2RowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddWektory2Row(Wektory2Row row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Wektory2Row AddWektory2Row(string Poczatek, string Koniec, double DX, double DY, double DZ, string zrodlo, double x, double y, double z) {
+                Wektory2Row rowWektory2Row = ((Wektory2Row)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        Poczatek,
+                        Koniec,
+                        DX,
+                        DY,
+                        DZ,
+                        zrodlo,
+                        x,
+                        y,
+                        z};
+                rowWektory2Row.ItemArray = columnValuesArray;
+                this.Rows.Add(rowWektory2Row);
+                return rowWektory2Row;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Wektory2Row FindById(int Id) {
+                return ((Wektory2Row)(this.Rows.Find(new object[] {
+                            Id})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                Wektory2DataTable cln = ((Wektory2DataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new Wektory2DataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnId = base.Columns["Id"];
+                this.columnPoczatek = base.Columns["Poczatek"];
+                this.columnKoniec = base.Columns["Koniec"];
+                this.columnDX = base.Columns["DX"];
+                this.columnDY = base.Columns["DY"];
+                this.columnDZ = base.Columns["DZ"];
+                this.columnzrodlo = base.Columns["zrodlo"];
+                this.columnx = base.Columns["x"];
+                this.columny = base.Columns["y"];
+                this.columnz = base.Columns["z"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnId);
+                this.columnPoczatek = new global::System.Data.DataColumn("Poczatek", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPoczatek);
+                this.columnKoniec = new global::System.Data.DataColumn("Koniec", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKoniec);
+                this.columnDX = new global::System.Data.DataColumn("DX", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDX);
+                this.columnDY = new global::System.Data.DataColumn("DY", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDY);
+                this.columnDZ = new global::System.Data.DataColumn("DZ", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDZ);
+                this.columnzrodlo = new global::System.Data.DataColumn("zrodlo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnzrodlo);
+                this.columnx = new global::System.Data.DataColumn("x", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnx);
+                this.columny = new global::System.Data.DataColumn("y", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columny);
+                this.columnz = new global::System.Data.DataColumn("z", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnz);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnId}, true));
+                this.columnId.AutoIncrement = true;
+                this.columnId.AutoIncrementSeed = -1;
+                this.columnId.AutoIncrementStep = -1;
+                this.columnId.AllowDBNull = false;
+                this.columnId.ReadOnly = true;
+                this.columnId.Unique = true;
+                this.columnPoczatek.MaxLength = 2147483647;
+                this.columnKoniec.MaxLength = 2147483647;
+                this.columnzrodlo.MaxLength = 2147483647;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Wektory2Row NewWektory2Row() {
+                return ((Wektory2Row)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new Wektory2Row(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(Wektory2Row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.Wektory2RowChanged != null)) {
+                    this.Wektory2RowChanged(this, new Wektory2RowChangeEvent(((Wektory2Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.Wektory2RowChanging != null)) {
+                    this.Wektory2RowChanging(this, new Wektory2RowChangeEvent(((Wektory2Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.Wektory2RowDeleted != null)) {
+                    this.Wektory2RowDeleted(this, new Wektory2RowChangeEvent(((Wektory2Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.Wektory2RowDeleting != null)) {
+                    this.Wektory2RowDeleting(this, new Wektory2RowChangeEvent(((Wektory2Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveWektory2Row(Wektory2Row row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                Database1DataSet ds = new Database1DataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "Wektory2DataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class RinexDataTable : global::System.Data.TypedTableBase<RinexRow> {
+            
+            private global::System.Data.DataColumn columnId;
+            
+            private global::System.Data.DataColumn columnNazwa_punktu;
+            
+            private global::System.Data.DataColumn columnNumer_punktu;
+            
+            private global::System.Data.DataColumn columnPoczątek_obserwacji;
+            
+            private global::System.Data.DataColumn columnKoniec_obserwacji;
+            
+            private global::System.Data.DataColumn columnInterwał;
+            
+            private global::System.Data.DataColumn columnSciezka;
+            
+            private global::System.Data.DataColumn columnSciezka_naw;
+            
+            private global::System.Data.DataColumn columnstaly;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public RinexDataTable() {
+                this.TableName = "Rinex";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal RinexDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected RinexDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn IdColumn {
+                get {
+                    return this.columnId;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Nazwa_punktuColumn {
+                get {
+                    return this.columnNazwa_punktu;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Numer_punktuColumn {
+                get {
+                    return this.columnNumer_punktu;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Początek_obserwacjiColumn {
+                get {
+                    return this.columnPoczątek_obserwacji;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Koniec_obserwacjiColumn {
+                get {
+                    return this.columnKoniec_obserwacji;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn InterwałColumn {
+                get {
+                    return this.columnInterwał;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn SciezkaColumn {
+                get {
+                    return this.columnSciezka;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Sciezka_nawColumn {
+                get {
+                    return this.columnSciezka_naw;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn stalyColumn {
+                get {
+                    return this.columnstaly;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public RinexRow this[int index] {
+                get {
+                    return ((RinexRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event RinexRowChangeEventHandler RinexRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event RinexRowChangeEventHandler RinexRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event RinexRowChangeEventHandler RinexRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event RinexRowChangeEventHandler RinexRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddRinexRow(RinexRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public RinexRow AddRinexRow(string Nazwa_punktu, string Numer_punktu, System.DateTime Początek_obserwacji, System.DateTime Koniec_obserwacji, double Interwał, string Sciezka, string Sciezka_naw, bool staly) {
+                RinexRow rowRinexRow = ((RinexRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        Nazwa_punktu,
+                        Numer_punktu,
+                        Początek_obserwacji,
+                        Koniec_obserwacji,
+                        Interwał,
+                        Sciezka,
+                        Sciezka_naw,
+                        staly};
+                rowRinexRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowRinexRow);
+                return rowRinexRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public RinexRow FindById(int Id) {
+                return ((RinexRow)(this.Rows.Find(new object[] {
+                            Id})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                RinexDataTable cln = ((RinexDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new RinexDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnId = base.Columns["Id"];
+                this.columnNazwa_punktu = base.Columns["Nazwa punktu"];
+                this.columnNumer_punktu = base.Columns["Numer punktu"];
+                this.columnPoczątek_obserwacji = base.Columns["Początek obserwacji"];
+                this.columnKoniec_obserwacji = base.Columns["Koniec obserwacji"];
+                this.columnInterwał = base.Columns["Interwał"];
+                this.columnSciezka = base.Columns["Sciezka"];
+                this.columnSciezka_naw = base.Columns["Sciezka naw"];
+                this.columnstaly = base.Columns["staly"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnId);
+                this.columnNazwa_punktu = new global::System.Data.DataColumn("Nazwa punktu", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNazwa_punktu);
+                this.columnNumer_punktu = new global::System.Data.DataColumn("Numer punktu", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNumer_punktu);
+                this.columnPoczątek_obserwacji = new global::System.Data.DataColumn("Początek obserwacji", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPoczątek_obserwacji);
+                this.columnKoniec_obserwacji = new global::System.Data.DataColumn("Koniec obserwacji", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKoniec_obserwacji);
+                this.columnInterwał = new global::System.Data.DataColumn("Interwał", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnInterwał);
+                this.columnSciezka = new global::System.Data.DataColumn("Sciezka", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSciezka);
+                this.columnSciezka_naw = new global::System.Data.DataColumn("Sciezka naw", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSciezka_naw);
+                this.columnstaly = new global::System.Data.DataColumn("staly", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstaly);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnId}, true));
+                this.columnId.AutoIncrement = true;
+                this.columnId.AutoIncrementSeed = -1;
+                this.columnId.AutoIncrementStep = -1;
+                this.columnId.AllowDBNull = false;
+                this.columnId.ReadOnly = true;
+                this.columnId.Unique = true;
+                this.columnNazwa_punktu.MaxLength = 2147483647;
+                this.columnNumer_punktu.MaxLength = 2147483647;
+                this.columnSciezka.MaxLength = 2147483647;
+                this.columnSciezka_naw.MaxLength = 2147483647;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public RinexRow NewRinexRow() {
+                return ((RinexRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new RinexRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(RinexRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.RinexRowChanged != null)) {
+                    this.RinexRowChanged(this, new RinexRowChangeEvent(((RinexRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.RinexRowChanging != null)) {
+                    this.RinexRowChanging(this, new RinexRowChangeEvent(((RinexRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.RinexRowDeleted != null)) {
+                    this.RinexRowDeleted(this, new RinexRowChangeEvent(((RinexRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.RinexRowDeleting != null)) {
+                    this.RinexRowDeleting(this, new RinexRowChangeEvent(((RinexRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveRinexRow(RinexRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                Database1DataSet ds = new Database1DataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "RinexDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -3645,6 +5022,38 @@ namespace Inz {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int wczytane {
+                get {
+                    try {
+                        return ((int)(this[this.tableWektory.wczytaneColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Wartość z kolumny \'wczytane\' w tabeli \'Wektory\' to DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableWektory.wczytaneColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int niewczytane {
+                get {
+                    try {
+                        return ((int)(this[this.tableWektory.niewczytaneColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Wartość z kolumny \'niewczytane\' w tabeli \'Wektory\' to DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableWektory.niewczytaneColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsWczytajNull() {
                 return this.IsNull(this.tableWektory.WczytajColumn);
             }
@@ -3809,6 +5218,976 @@ namespace Inz {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetDZNull() {
                 this[this.tableWektory.DZColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IswczytaneNull() {
+                return this.IsNull(this.tableWektory.wczytaneColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetwczytaneNull() {
+                this[this.tableWektory.wczytaneColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsniewczytaneNull() {
+                return this.IsNull(this.tableWektory.niewczytaneColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetniewczytaneNull() {
+                this[this.tableWektory.niewczytaneColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class TransformacjaRow : global::System.Data.DataRow {
+            
+            private TransformacjaDataTable tableTransformacja;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal TransformacjaRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableTransformacja = ((TransformacjaDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double X {
+                get {
+                    try {
+                        return ((double)(this[this.tableTransformacja.XColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Wartość z kolumny \'X\' w tabeli \'Transformacja\' to DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTransformacja.XColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double Y {
+                get {
+                    try {
+                        return ((double)(this[this.tableTransformacja.YColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Wartość z kolumny \'Y\' w tabeli \'Transformacja\' to DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTransformacja.YColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double Z {
+                get {
+                    try {
+                        return ((double)(this[this.tableTransformacja.ZColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Wartość z kolumny \'Z\' w tabeli \'Transformacja\' to DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTransformacja.ZColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double B {
+                get {
+                    try {
+                        return ((double)(this[this.tableTransformacja.BColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Wartość z kolumny \'B\' w tabeli \'Transformacja\' to DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTransformacja.BColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double H {
+                get {
+                    try {
+                        return ((double)(this[this.tableTransformacja.HColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Wartość z kolumny \'H\' w tabeli \'Transformacja\' to DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTransformacja.HColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double L {
+                get {
+                    try {
+                        return ((double)(this[this.tableTransformacja.LColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Wartość z kolumny \'L\' w tabeli \'Transformacja\' to DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTransformacja.LColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double Xgk {
+                get {
+                    try {
+                        return ((double)(this[this.tableTransformacja.XgkColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Wartość z kolumny \'Xgk\' w tabeli \'Transformacja\' to DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTransformacja.XgkColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double Ygk {
+                get {
+                    try {
+                        return ((double)(this[this.tableTransformacja.YgkColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Wartość z kolumny \'Ygk\' w tabeli \'Transformacja\' to DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTransformacja.YgkColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double ksi {
+                get {
+                    try {
+                        return ((double)(this[this.tableTransformacja.ksiColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Wartość z kolumny \'ksi\' w tabeli \'Transformacja\' to DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTransformacja.ksiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double eta {
+                get {
+                    try {
+                        return ((double)(this[this.tableTransformacja.etaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Wartość z kolumny \'eta\' w tabeli \'Transformacja\' to DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTransformacja.etaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double xt {
+                get {
+                    try {
+                        return ((double)(this[this.tableTransformacja.xtColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Wartość z kolumny \'xt\' w tabeli \'Transformacja\' to DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTransformacja.xtColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double yt {
+                get {
+                    try {
+                        return ((double)(this[this.tableTransformacja.ytColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Wartość z kolumny \'yt\' w tabeli \'Transformacja\' to DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTransformacja.ytColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double zt {
+                get {
+                    try {
+                        return ((double)(this[this.tableTransformacja.ztColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Wartość z kolumny \'zt\' w tabeli \'Transformacja\' to DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTransformacja.ztColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Nazwa {
+                get {
+                    try {
+                        return ((string)(this[this.tableTransformacja.NazwaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Wartość z kolumny \'Nazwa\' w tabeli \'Transformacja\' to DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTransformacja.NazwaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int Id {
+                get {
+                    return ((int)(this[this.tableTransformacja.IdColumn]));
+                }
+                set {
+                    this[this.tableTransformacja.IdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsXNull() {
+                return this.IsNull(this.tableTransformacja.XColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetXNull() {
+                this[this.tableTransformacja.XColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsYNull() {
+                return this.IsNull(this.tableTransformacja.YColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetYNull() {
+                this[this.tableTransformacja.YColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsZNull() {
+                return this.IsNull(this.tableTransformacja.ZColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetZNull() {
+                this[this.tableTransformacja.ZColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsBNull() {
+                return this.IsNull(this.tableTransformacja.BColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetBNull() {
+                this[this.tableTransformacja.BColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsHNull() {
+                return this.IsNull(this.tableTransformacja.HColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetHNull() {
+                this[this.tableTransformacja.HColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsLNull() {
+                return this.IsNull(this.tableTransformacja.LColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetLNull() {
+                this[this.tableTransformacja.LColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsXgkNull() {
+                return this.IsNull(this.tableTransformacja.XgkColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetXgkNull() {
+                this[this.tableTransformacja.XgkColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsYgkNull() {
+                return this.IsNull(this.tableTransformacja.YgkColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetYgkNull() {
+                this[this.tableTransformacja.YgkColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsksiNull() {
+                return this.IsNull(this.tableTransformacja.ksiColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetksiNull() {
+                this[this.tableTransformacja.ksiColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsetaNull() {
+                return this.IsNull(this.tableTransformacja.etaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetetaNull() {
+                this[this.tableTransformacja.etaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsxtNull() {
+                return this.IsNull(this.tableTransformacja.xtColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetxtNull() {
+                this[this.tableTransformacja.xtColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsytNull() {
+                return this.IsNull(this.tableTransformacja.ytColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetytNull() {
+                this[this.tableTransformacja.ytColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsztNull() {
+                return this.IsNull(this.tableTransformacja.ztColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetztNull() {
+                this[this.tableTransformacja.ztColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNazwaNull() {
+                return this.IsNull(this.tableTransformacja.NazwaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNazwaNull() {
+                this[this.tableTransformacja.NazwaColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class Wektory2Row : global::System.Data.DataRow {
+            
+            private Wektory2DataTable tableWektory2;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal Wektory2Row(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableWektory2 = ((Wektory2DataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int Id {
+                get {
+                    return ((int)(this[this.tableWektory2.IdColumn]));
+                }
+                set {
+                    this[this.tableWektory2.IdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Poczatek {
+                get {
+                    try {
+                        return ((string)(this[this.tableWektory2.PoczatekColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Wartość z kolumny \'Poczatek\' w tabeli \'Wektory2\' to DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableWektory2.PoczatekColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Koniec {
+                get {
+                    try {
+                        return ((string)(this[this.tableWektory2.KoniecColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Wartość z kolumny \'Koniec\' w tabeli \'Wektory2\' to DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableWektory2.KoniecColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double DX {
+                get {
+                    try {
+                        return ((double)(this[this.tableWektory2.DXColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Wartość z kolumny \'DX\' w tabeli \'Wektory2\' to DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableWektory2.DXColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double DY {
+                get {
+                    try {
+                        return ((double)(this[this.tableWektory2.DYColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Wartość z kolumny \'DY\' w tabeli \'Wektory2\' to DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableWektory2.DYColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double DZ {
+                get {
+                    try {
+                        return ((double)(this[this.tableWektory2.DZColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Wartość z kolumny \'DZ\' w tabeli \'Wektory2\' to DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableWektory2.DZColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string zrodlo {
+                get {
+                    try {
+                        return ((string)(this[this.tableWektory2.zrodloColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Wartość z kolumny \'zrodlo\' w tabeli \'Wektory2\' to DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableWektory2.zrodloColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double x {
+                get {
+                    try {
+                        return ((double)(this[this.tableWektory2.xColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Wartość z kolumny \'x\' w tabeli \'Wektory2\' to DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableWektory2.xColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double y {
+                get {
+                    try {
+                        return ((double)(this[this.tableWektory2.yColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Wartość z kolumny \'y\' w tabeli \'Wektory2\' to DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableWektory2.yColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double z {
+                get {
+                    try {
+                        return ((double)(this[this.tableWektory2.zColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Wartość z kolumny \'z\' w tabeli \'Wektory2\' to DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableWektory2.zColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPoczatekNull() {
+                return this.IsNull(this.tableWektory2.PoczatekColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPoczatekNull() {
+                this[this.tableWektory2.PoczatekColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsKoniecNull() {
+                return this.IsNull(this.tableWektory2.KoniecColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetKoniecNull() {
+                this[this.tableWektory2.KoniecColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDXNull() {
+                return this.IsNull(this.tableWektory2.DXColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDXNull() {
+                this[this.tableWektory2.DXColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDYNull() {
+                return this.IsNull(this.tableWektory2.DYColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDYNull() {
+                this[this.tableWektory2.DYColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDZNull() {
+                return this.IsNull(this.tableWektory2.DZColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDZNull() {
+                this[this.tableWektory2.DZColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IszrodloNull() {
+                return this.IsNull(this.tableWektory2.zrodloColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetzrodloNull() {
+                this[this.tableWektory2.zrodloColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsxNull() {
+                return this.IsNull(this.tableWektory2.xColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetxNull() {
+                this[this.tableWektory2.xColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsyNull() {
+                return this.IsNull(this.tableWektory2.yColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetyNull() {
+                this[this.tableWektory2.yColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IszNull() {
+                return this.IsNull(this.tableWektory2.zColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetzNull() {
+                this[this.tableWektory2.zColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class RinexRow : global::System.Data.DataRow {
+            
+            private RinexDataTable tableRinex;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal RinexRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableRinex = ((RinexDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int Id {
+                get {
+                    return ((int)(this[this.tableRinex.IdColumn]));
+                }
+                set {
+                    this[this.tableRinex.IdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Nazwa_punktu {
+                get {
+                    try {
+                        return ((string)(this[this.tableRinex.Nazwa_punktuColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Wartość z kolumny \'Nazwa punktu\' w tabeli \'Rinex\' to DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableRinex.Nazwa_punktuColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Numer_punktu {
+                get {
+                    try {
+                        return ((string)(this[this.tableRinex.Numer_punktuColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Wartość z kolumny \'Numer punktu\' w tabeli \'Rinex\' to DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableRinex.Numer_punktuColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime Początek_obserwacji {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableRinex.Początek_obserwacjiColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Wartość z kolumny \'Początek obserwacji\' w tabeli \'Rinex\' to DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableRinex.Początek_obserwacjiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime Koniec_obserwacji {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableRinex.Koniec_obserwacjiColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Wartość z kolumny \'Koniec obserwacji\' w tabeli \'Rinex\' to DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableRinex.Koniec_obserwacjiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double Interwał {
+                get {
+                    try {
+                        return ((double)(this[this.tableRinex.InterwałColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Wartość z kolumny \'Interwał\' w tabeli \'Rinex\' to DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableRinex.InterwałColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Sciezka {
+                get {
+                    try {
+                        return ((string)(this[this.tableRinex.SciezkaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Wartość z kolumny \'Sciezka\' w tabeli \'Rinex\' to DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableRinex.SciezkaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Sciezka_naw {
+                get {
+                    try {
+                        return ((string)(this[this.tableRinex.Sciezka_nawColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Wartość z kolumny \'Sciezka naw\' w tabeli \'Rinex\' to DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableRinex.Sciezka_nawColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool staly {
+                get {
+                    try {
+                        return ((bool)(this[this.tableRinex.stalyColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Wartość z kolumny \'staly\' w tabeli \'Rinex\' to DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableRinex.stalyColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNazwa_punktuNull() {
+                return this.IsNull(this.tableRinex.Nazwa_punktuColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNazwa_punktuNull() {
+                this[this.tableRinex.Nazwa_punktuColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNumer_punktuNull() {
+                return this.IsNull(this.tableRinex.Numer_punktuColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNumer_punktuNull() {
+                this[this.tableRinex.Numer_punktuColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPoczątek_obserwacjiNull() {
+                return this.IsNull(this.tableRinex.Początek_obserwacjiColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPoczątek_obserwacjiNull() {
+                this[this.tableRinex.Początek_obserwacjiColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsKoniec_obserwacjiNull() {
+                return this.IsNull(this.tableRinex.Koniec_obserwacjiColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetKoniec_obserwacjiNull() {
+                this[this.tableRinex.Koniec_obserwacjiColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsInterwałNull() {
+                return this.IsNull(this.tableRinex.InterwałColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetInterwałNull() {
+                this[this.tableRinex.InterwałColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSciezkaNull() {
+                return this.IsNull(this.tableRinex.SciezkaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSciezkaNull() {
+                this[this.tableRinex.SciezkaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSciezka_nawNull() {
+                return this.IsNull(this.tableRinex.Sciezka_nawColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSciezka_nawNull() {
+                this[this.tableRinex.Sciezka_nawColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsstalyNull() {
+                return this.IsNull(this.tableRinex.stalyColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetstalyNull() {
+                this[this.tableRinex.stalyColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -4002,6 +6381,108 @@ namespace Inz {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public WektoryRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class TransformacjaRowChangeEvent : global::System.EventArgs {
+            
+            private TransformacjaRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TransformacjaRowChangeEvent(TransformacjaRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TransformacjaRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class Wektory2RowChangeEvent : global::System.EventArgs {
+            
+            private Wektory2Row eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Wektory2RowChangeEvent(Wektory2Row row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Wektory2Row Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class RinexRowChangeEvent : global::System.EventArgs {
+            
+            private RinexRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public RinexRowChangeEvent(RinexRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public RinexRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -6331,16 +8812,14 @@ SELECT Id, Nazwa, X, Y, H, Staly FROM Wspolrzedne WHERE (Id = @Id)";
             tableMapping.ColumnMappings.Add("DX", "DX");
             tableMapping.ColumnMappings.Add("DY", "DY");
             tableMapping.ColumnMappings.Add("DZ", "DZ");
+            tableMapping.ColumnMappings.Add("wczytane", "wczytane");
+            tableMapping.ColumnMappings.Add("niewczytane", "niewczytane");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Wektory] WHERE (([Id] = @Original_Id) AND ((@IsNull_poczatek = 1 AND [poczatek] IS NULL) OR ([poczatek] = @Original_poczatek)) AND ((@IsNull_koniec = 1 AND [koniec] IS NULL) OR ([koniec] = @Original_koniec)) AND ((@IsNull_DX = 1 AND [DX] IS NULL) OR ([DX] = @Original_DX)) AND ((@IsNull_DY = 1 AND [DY] IS NULL) OR ([DY] = @Original_DY)) AND ((@IsNull_DZ = 1 AND [DZ] IS NULL) OR ([DZ] = @Original_DZ)) AND ((@IsNull_sdx = 1 AND [sdx] IS NULL) OR ([sdx] = @Original_sdx)) AND ((@IsNull_sdy = 1 AND [sdy] IS NULL) OR ([sdy] = @Original_sdy)) AND ((@IsNull_sdz = 1 AND [sdz] IS NULL) OR ([sdz] = @Original_sdz)) AND ((@IsNull_sdxy = 1 AND [sdxy] IS NULL) OR ([sdxy] = @Original_sdxy)) AND ((@IsNull_sdyz = 1 AND [sdyz] IS NULL) OR ([sdyz] = @Original_sdyz)) AND ((@IsNull_sdzx = 1 AND [sdzx] IS NULL) OR ([sdzx] = @Original_sdzx)) AND ((@IsNull_ratio = 1 AND [ratio] IS NULL) OR ([ratio] = @Original_ratio)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Wektory] WHERE (([Id] = @Original_Id) AND ((@IsNull_DX = 1 AND [DX] IS NULL) OR ([DX] = @Original_DX)) AND ((@IsNull_DY = 1 AND [DY] IS NULL) OR ([DY] = @Original_DY)) AND ((@IsNull_DZ = 1 AND [DZ] IS NULL) OR ([DZ] = @Original_DZ)) AND ((@IsNull_sdx = 1 AND [sdx] IS NULL) OR ([sdx] = @Original_sdx)) AND ((@IsNull_sdy = 1 AND [sdy] IS NULL) OR ([sdy] = @Original_sdy)) AND ((@IsNull_sdz = 1 AND [sdz] IS NULL) OR ([sdz] = @Original_sdz)) AND ((@IsNull_sdxy = 1 AND [sdxy] IS NULL) OR ([sdxy] = @Original_sdxy)) AND ((@IsNull_sdyz = 1 AND [sdyz] IS NULL) OR ([sdyz] = @Original_sdyz)) AND ((@IsNull_sdzx = 1 AND [sdzx] IS NULL) OR ([sdzx] = @Original_sdzx)) AND ((@IsNull_ratio = 1 AND [ratio] IS NULL) OR ([ratio] = @Original_ratio)) AND ((@IsNull_wczytane = 1 AND [wczytane] IS NULL) OR ([wczytane] = @Original_wczytane)) AND ((@IsNull_niewczytane = 1 AND [niewczytane] IS NULL) OR ([niewczytane] = @Original_niewczytane)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_poczatek", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "poczatek", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_poczatek", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "poczatek", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_koniec", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "koniec", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_koniec", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "koniec", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DX", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DX", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DX", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DX", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DY", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DY", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -6361,13 +8840,17 @@ SELECT Id, Nazwa, X, Y, H, Staly FROM Wspolrzedne WHERE (Id = @Id)";
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_sdzx", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sdzx", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ratio", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ratio", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ratio", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ratio", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_wczytane", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "wczytane", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_wczytane", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "wczytane", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_niewczytane", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "niewczytane", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_niewczytane", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "niewczytane", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Wektory] ([poczatek], [koniec], [DX], [DY], [DZ], [sdx], [sdy], [sdz], [sdxy], [sdyz], [sdzx], [ratio], [sciezka]) VALUES (@poczatek, @koniec, @DX, @DY, @DZ, @sdx, @sdy, @sdz, @sdxy, @sdyz, @sdzx, @ratio, @sciezka);
-SELECT Id, poczatek, koniec, DX, DY, DZ, sdx, sdy, sdz, sdxy, sdyz, sdzx, ratio, sciezka FROM Wektory WHERE (Id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Wektory] ([poczatek], [koniec], [DX], [DY], [DZ], [sdx], [sdy], [sdz], [sdxy], [sdyz], [sdzx], [ratio], [sciezka], [wczytane], [niewczytane]) VALUES (@poczatek, @koniec, @DX, @DY, @DZ, @sdx, @sdy, @sdz, @sdxy, @sdyz, @sdzx, @ratio, @sciezka, @wczytane, @niewczytane);
+SELECT Id, poczatek, koniec, DX, DY, DZ, sdx, sdy, sdz, sdxy, sdyz, sdzx, ratio, sciezka, wczytane, niewczytane FROM Wektory WHERE (Id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@poczatek", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "poczatek", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@koniec", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "koniec", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@poczatek", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "poczatek", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@koniec", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "koniec", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DX", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DX", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DY", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DY", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DZ", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DZ", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -6379,13 +8862,15 @@ SELECT Id, poczatek, koniec, DX, DY, DZ, sdx, sdy, sdz, sdxy, sdyz, sdzx, ratio,
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sdzx", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sdzx", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ratio", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ratio", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sciezka", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sciezka", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@wczytane", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "wczytane", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@niewczytane", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "niewczytane", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [Wektory] SET [poczatek] = @poczatek, [koniec] = @koniec, [DX] = @DX, [DY] = @DY, [DZ] = @DZ, [sdx] = @sdx, [sdy] = @sdy, [sdz] = @sdz, [sdxy] = @sdxy, [sdyz] = @sdyz, [sdzx] = @sdzx, [ratio] = @ratio, [sciezka] = @sciezka WHERE (([Id] = @Original_Id) AND ((@IsNull_poczatek = 1 AND [poczatek] IS NULL) OR ([poczatek] = @Original_poczatek)) AND ((@IsNull_koniec = 1 AND [koniec] IS NULL) OR ([koniec] = @Original_koniec)) AND ((@IsNull_DX = 1 AND [DX] IS NULL) OR ([DX] = @Original_DX)) AND ((@IsNull_DY = 1 AND [DY] IS NULL) OR ([DY] = @Original_DY)) AND ((@IsNull_DZ = 1 AND [DZ] IS NULL) OR ([DZ] = @Original_DZ)) AND ((@IsNull_sdx = 1 AND [sdx] IS NULL) OR ([sdx] = @Original_sdx)) AND ((@IsNull_sdy = 1 AND [sdy] IS NULL) OR ([sdy] = @Original_sdy)) AND ((@IsNull_sdz = 1 AND [sdz] IS NULL) OR ([sdz] = @Original_sdz)) AND ((@IsNull_sdxy = 1 AND [sdxy] IS NULL) OR ([sdxy] = @Original_sdxy)) AND ((@IsNull_sdyz = 1 AND [sdyz] IS NULL) OR ([sdyz] = @Original_sdyz)) AND ((@IsNull_sdzx = 1 AND [sdzx] IS NULL) OR ([sdzx] = @Original_sdzx)) AND ((@IsNull_ratio = 1 AND [ratio] IS NULL) OR ([ratio] = @Original_ratio)));
-SELECT Id, poczatek, koniec, DX, DY, DZ, sdx, sdy, sdz, sdxy, sdyz, sdzx, ratio, sciezka FROM Wektory WHERE (Id = @Id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Wektory] SET [poczatek] = @poczatek, [koniec] = @koniec, [DX] = @DX, [DY] = @DY, [DZ] = @DZ, [sdx] = @sdx, [sdy] = @sdy, [sdz] = @sdz, [sdxy] = @sdxy, [sdyz] = @sdyz, [sdzx] = @sdzx, [ratio] = @ratio, [sciezka] = @sciezka, [wczytane] = @wczytane, [niewczytane] = @niewczytane WHERE (([Id] = @Original_Id) AND ((@IsNull_DX = 1 AND [DX] IS NULL) OR ([DX] = @Original_DX)) AND ((@IsNull_DY = 1 AND [DY] IS NULL) OR ([DY] = @Original_DY)) AND ((@IsNull_DZ = 1 AND [DZ] IS NULL) OR ([DZ] = @Original_DZ)) AND ((@IsNull_sdx = 1 AND [sdx] IS NULL) OR ([sdx] = @Original_sdx)) AND ((@IsNull_sdy = 1 AND [sdy] IS NULL) OR ([sdy] = @Original_sdy)) AND ((@IsNull_sdz = 1 AND [sdz] IS NULL) OR ([sdz] = @Original_sdz)) AND ((@IsNull_sdxy = 1 AND [sdxy] IS NULL) OR ([sdxy] = @Original_sdxy)) AND ((@IsNull_sdyz = 1 AND [sdyz] IS NULL) OR ([sdyz] = @Original_sdyz)) AND ((@IsNull_sdzx = 1 AND [sdzx] IS NULL) OR ([sdzx] = @Original_sdzx)) AND ((@IsNull_ratio = 1 AND [ratio] IS NULL) OR ([ratio] = @Original_ratio)) AND ((@IsNull_wczytane = 1 AND [wczytane] IS NULL) OR ([wczytane] = @Original_wczytane)) AND ((@IsNull_niewczytane = 1 AND [niewczytane] IS NULL) OR ([niewczytane] = @Original_niewczytane)));
+SELECT Id, poczatek, koniec, DX, DY, DZ, sdx, sdy, sdz, sdxy, sdyz, sdzx, ratio, sciezka, wczytane, niewczytane FROM Wektory WHERE (Id = @Id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@poczatek", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "poczatek", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@koniec", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "koniec", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@poczatek", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "poczatek", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@koniec", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "koniec", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DX", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DX", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DY", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DY", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DZ", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DZ", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -6397,11 +8882,9 @@ SELECT Id, poczatek, koniec, DX, DY, DZ, sdx, sdy, sdz, sdxy, sdyz, sdzx, ratio,
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sdzx", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sdzx", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ratio", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ratio", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sciezka", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sciezka", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@wczytane", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "wczytane", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@niewczytane", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "niewczytane", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_poczatek", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "poczatek", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_poczatek", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "poczatek", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_koniec", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "koniec", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_koniec", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "koniec", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DX", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DX", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DX", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DX", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DY", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DY", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -6422,6 +8905,10 @@ SELECT Id, poczatek, koniec, DX, DY, DZ, sdx, sdy, sdz, sdxy, sdyz, sdzx, ratio,
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_sdzx", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sdzx", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ratio", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ratio", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ratio", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ratio", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_wczytane", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "wczytane", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_wczytane", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "wczytane", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_niewczytane", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "niewczytane", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_niewczytane", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "niewczytane", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -6439,7 +8926,7 @@ SELECT Id, poczatek, koniec, DX, DY, DZ, sdx, sdy, sdz, sdxy, sdyz, sdzx, ratio,
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT        Id, poczatek, koniec, DX, DY, DZ, sdx, sdy, sdz, sdxy, sdyz, sdzx, " +
-                "ratio, sciezka\r\nFROM            Wektory";
+                "ratio, sciezka, wczytane, niewczytane\r\nFROM            Wektory";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -6500,99 +8987,99 @@ SELECT Id, poczatek, koniec, DX, DY, DZ, sdx, sdy, sdz, sdxy, sdyz, sdzx, ratio,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, string Original_poczatek, string Original_koniec, global::System.Nullable<double> Original_DX, global::System.Nullable<double> Original_DY, global::System.Nullable<double> Original_DZ, global::System.Nullable<double> Original_sdx, global::System.Nullable<double> Original_sdy, global::System.Nullable<double> Original_sdz, global::System.Nullable<double> Original_sdxy, global::System.Nullable<double> Original_sdyz, global::System.Nullable<double> Original_sdzx, global::System.Nullable<double> Original_ratio) {
+        public virtual int Delete(int Original_Id, global::System.Nullable<double> Original_DX, global::System.Nullable<double> Original_DY, global::System.Nullable<double> Original_DZ, global::System.Nullable<double> Original_sdx, global::System.Nullable<double> Original_sdy, global::System.Nullable<double> Original_sdz, global::System.Nullable<double> Original_sdxy, global::System.Nullable<double> Original_sdyz, global::System.Nullable<double> Original_sdzx, global::System.Nullable<double> Original_ratio, global::System.Nullable<int> Original_wczytane, global::System.Nullable<int> Original_niewczytane) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
-            if ((Original_poczatek == null)) {
+            if ((Original_DX.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((double)(Original_DX.Value));
+            }
+            else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_poczatek));
+            if ((Original_DY.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((double)(Original_DY.Value));
             }
-            if ((Original_koniec == null)) {
+            else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_koniec));
-            }
-            if ((Original_DX.HasValue == true)) {
+            if ((Original_DZ.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((double)(Original_DX.Value));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((double)(Original_DZ.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((Original_DY.HasValue == true)) {
+            if ((Original_sdx.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((double)(Original_DY.Value));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((double)(Original_sdx.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((Original_DZ.HasValue == true)) {
+            if ((Original_sdy.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((double)(Original_DZ.Value));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((double)(Original_sdy.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((Original_sdx.HasValue == true)) {
+            if ((Original_sdz.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((double)(Original_sdx.Value));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((double)(Original_sdz.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
-            if ((Original_sdy.HasValue == true)) {
+            if ((Original_sdxy.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((double)(Original_sdy.Value));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((double)(Original_sdxy.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
-            if ((Original_sdz.HasValue == true)) {
+            if ((Original_sdyz.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[16].Value = ((double)(Original_sdz.Value));
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((double)(Original_sdyz.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
-            if ((Original_sdxy.HasValue == true)) {
+            if ((Original_sdzx.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[18].Value = ((double)(Original_sdxy.Value));
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((double)(Original_sdzx.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
-            if ((Original_sdyz.HasValue == true)) {
+            if ((Original_ratio.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[20].Value = ((double)(Original_sdyz.Value));
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((double)(Original_ratio.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[20].Value = global::System.DBNull.Value;
             }
-            if ((Original_sdzx.HasValue == true)) {
+            if ((Original_wczytane.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[22].Value = ((double)(Original_sdzx.Value));
+                this.Adapter.DeleteCommand.Parameters[22].Value = ((int)(Original_wczytane.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
-            if ((Original_ratio.HasValue == true)) {
+            if ((Original_niewczytane.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[24].Value = ((double)(Original_ratio.Value));
+                this.Adapter.DeleteCommand.Parameters[24].Value = ((int)(Original_niewczytane.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(1));
@@ -6618,7 +9105,7 @@ SELECT Id, poczatek, koniec, DX, DY, DZ, sdx, sdy, sdz, sdxy, sdyz, sdzx, ratio,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string poczatek, string koniec, global::System.Nullable<double> DX, global::System.Nullable<double> DY, global::System.Nullable<double> DZ, global::System.Nullable<double> sdx, global::System.Nullable<double> sdy, global::System.Nullable<double> sdz, global::System.Nullable<double> sdxy, global::System.Nullable<double> sdyz, global::System.Nullable<double> sdzx, global::System.Nullable<double> ratio, string sciezka) {
+        public virtual int Insert(string poczatek, string koniec, global::System.Nullable<double> DX, global::System.Nullable<double> DY, global::System.Nullable<double> DZ, global::System.Nullable<double> sdx, global::System.Nullable<double> sdy, global::System.Nullable<double> sdz, global::System.Nullable<double> sdxy, global::System.Nullable<double> sdyz, global::System.Nullable<double> sdzx, global::System.Nullable<double> ratio, string sciezka, global::System.Nullable<int> wczytane, global::System.Nullable<int> niewczytane) {
             if ((poczatek == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -6697,6 +9184,18 @@ SELECT Id, poczatek, koniec, DX, DY, DZ, sdx, sdy, sdz, sdxy, sdyz, sdzx, ratio,
             else {
                 this.Adapter.InsertCommand.Parameters[12].Value = ((string)(sciezka));
             }
+            if ((wczytane.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[13].Value = ((int)(wczytane.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            if ((niewczytane.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[14].Value = ((int)(niewczytane.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6731,9 +9230,9 @@ SELECT Id, poczatek, koniec, DX, DY, DZ, sdx, sdy, sdz, sdxy, sdyz, sdzx, ratio,
                     global::System.Nullable<double> sdzx, 
                     global::System.Nullable<double> ratio, 
                     string sciezka, 
+                    global::System.Nullable<int> wczytane, 
+                    global::System.Nullable<int> niewczytane, 
                     int Original_Id, 
-                    string Original_poczatek, 
-                    string Original_koniec, 
                     global::System.Nullable<double> Original_DX, 
                     global::System.Nullable<double> Original_DY, 
                     global::System.Nullable<double> Original_DZ, 
@@ -6744,6 +9243,8 @@ SELECT Id, poczatek, koniec, DX, DY, DZ, sdx, sdy, sdz, sdxy, sdyz, sdzx, ratio,
                     global::System.Nullable<double> Original_sdyz, 
                     global::System.Nullable<double> Original_sdzx, 
                     global::System.Nullable<double> Original_ratio, 
+                    global::System.Nullable<int> Original_wczytane, 
+                    global::System.Nullable<int> Original_niewczytane, 
                     int Id) {
             if ((poczatek == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -6823,104 +9324,116 @@ SELECT Id, poczatek, koniec, DX, DY, DZ, sdx, sdy, sdz, sdxy, sdyz, sdzx, ratio,
             else {
                 this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(sciezka));
             }
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_Id));
-            if ((Original_poczatek == null)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+            if ((wczytane.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(wczytane.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_poczatek));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
-            if ((Original_koniec == null)) {
+            if ((niewczytane.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(niewczytane.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Original_Id));
+            if ((Original_DX.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((double)(Original_DX.Value));
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_koniec));
-            }
-            if ((Original_DX.HasValue == true)) {
+            if ((Original_DY.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((double)(Original_DX.Value));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((double)(Original_DY.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
             }
-            if ((Original_DY.HasValue == true)) {
+            if ((Original_DZ.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((double)(Original_DY.Value));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((double)(Original_DZ.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
             }
-            if ((Original_DZ.HasValue == true)) {
+            if ((Original_sdx.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((double)(Original_DZ.Value));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((double)(Original_sdx.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
             }
-            if ((Original_sdx.HasValue == true)) {
+            if ((Original_sdy.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((double)(Original_sdx.Value));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((double)(Original_sdy.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
             }
-            if ((Original_sdy.HasValue == true)) {
+            if ((Original_sdz.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((double)(Original_sdy.Value));
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((double)(Original_sdz.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
             }
-            if ((Original_sdz.HasValue == true)) {
+            if ((Original_sdxy.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((double)(Original_sdz.Value));
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((double)(Original_sdxy.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
             }
-            if ((Original_sdxy.HasValue == true)) {
+            if ((Original_sdyz.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((double)(Original_sdxy.Value));
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((double)(Original_sdyz.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
             }
-            if ((Original_sdyz.HasValue == true)) {
+            if ((Original_sdzx.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((double)(Original_sdyz.Value));
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((double)(Original_sdzx.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[33].Value = global::System.DBNull.Value;
             }
-            if ((Original_sdzx.HasValue == true)) {
+            if ((Original_ratio.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[35].Value = ((double)(Original_sdzx.Value));
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((double)(Original_ratio.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[35].Value = global::System.DBNull.Value;
             }
-            if ((Original_ratio.HasValue == true)) {
+            if ((Original_wczytane.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[37].Value = ((double)(Original_ratio.Value));
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((int)(Original_wczytane.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[37].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[38].Value = ((int)(Id));
+            if ((Original_niewczytane.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((int)(Original_niewczytane.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[39].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[40].Value = ((int)(Id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6955,9 +9468,9 @@ SELECT Id, poczatek, koniec, DX, DY, DZ, sdx, sdy, sdz, sdxy, sdyz, sdzx, ratio,
                     global::System.Nullable<double> sdzx, 
                     global::System.Nullable<double> ratio, 
                     string sciezka, 
+                    global::System.Nullable<int> wczytane, 
+                    global::System.Nullable<int> niewczytane, 
                     int Original_Id, 
-                    string Original_poczatek, 
-                    string Original_koniec, 
                     global::System.Nullable<double> Original_DX, 
                     global::System.Nullable<double> Original_DY, 
                     global::System.Nullable<double> Original_DZ, 
@@ -6967,8 +9480,1852 @@ SELECT Id, poczatek, koniec, DX, DY, DZ, sdx, sdy, sdz, sdxy, sdyz, sdzx, ratio,
                     global::System.Nullable<double> Original_sdxy, 
                     global::System.Nullable<double> Original_sdyz, 
                     global::System.Nullable<double> Original_sdzx, 
-                    global::System.Nullable<double> Original_ratio) {
-            return this.Update(poczatek, koniec, DX, DY, DZ, sdx, sdy, sdz, sdxy, sdyz, sdzx, ratio, sciezka, Original_Id, Original_poczatek, Original_koniec, Original_DX, Original_DY, Original_DZ, Original_sdx, Original_sdy, Original_sdz, Original_sdxy, Original_sdyz, Original_sdzx, Original_ratio, Original_Id);
+                    global::System.Nullable<double> Original_ratio, 
+                    global::System.Nullable<int> Original_wczytane, 
+                    global::System.Nullable<int> Original_niewczytane) {
+            return this.Update(poczatek, koniec, DX, DY, DZ, sdx, sdy, sdz, sdxy, sdyz, sdzx, ratio, sciezka, wczytane, niewczytane, Original_Id, Original_DX, Original_DY, Original_DZ, Original_sdx, Original_sdy, Original_sdz, Original_sdxy, Original_sdyz, Original_sdzx, Original_ratio, Original_wczytane, Original_niewczytane, Original_Id);
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class TransformacjaTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public TransformacjaTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "Transformacja";
+            tableMapping.ColumnMappings.Add("X", "X");
+            tableMapping.ColumnMappings.Add("Y", "Y");
+            tableMapping.ColumnMappings.Add("Z", "Z");
+            tableMapping.ColumnMappings.Add("B", "B");
+            tableMapping.ColumnMappings.Add("H", "H");
+            tableMapping.ColumnMappings.Add("L", "L");
+            tableMapping.ColumnMappings.Add("Xgk", "Xgk");
+            tableMapping.ColumnMappings.Add("Ygk", "Ygk");
+            tableMapping.ColumnMappings.Add("ksi", "ksi");
+            tableMapping.ColumnMappings.Add("eta", "eta");
+            tableMapping.ColumnMappings.Add("xt", "xt");
+            tableMapping.ColumnMappings.Add("yt", "yt");
+            tableMapping.ColumnMappings.Add("zt", "zt");
+            tableMapping.ColumnMappings.Add("Nazwa", "Nazwa");
+            tableMapping.ColumnMappings.Add("Id", "Id");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Transformacja] WHERE (((@IsNull_X = 1 AND [X] IS NULL) OR ([X] = @Original_X)) AND ((@IsNull_Y = 1 AND [Y] IS NULL) OR ([Y] = @Original_Y)) AND ((@IsNull_Z = 1 AND [Z] IS NULL) OR ([Z] = @Original_Z)) AND ((@IsNull_B = 1 AND [B] IS NULL) OR ([B] = @Original_B)) AND ((@IsNull_L = 1 AND [L] IS NULL) OR ([L] = @Original_L)) AND ((@IsNull_H = 1 AND [H] IS NULL) OR ([H] = @Original_H)) AND ((@IsNull_Xgk = 1 AND [Xgk] IS NULL) OR ([Xgk] = @Original_Xgk)) AND ((@IsNull_Ygk = 1 AND [Ygk] IS NULL) OR ([Ygk] = @Original_Ygk)) AND ((@IsNull_ksi = 1 AND [ksi] IS NULL) OR ([ksi] = @Original_ksi)) AND ((@IsNull_eta = 1 AND [eta] IS NULL) OR ([eta] = @Original_eta)) AND ((@IsNull_xt = 1 AND [xt] IS NULL) OR ([xt] = @Original_xt)) AND ((@IsNull_yt = 1 AND [yt] IS NULL) OR ([yt] = @Original_yt)) AND ((@IsNull_zt = 1 AND [zt] IS NULL) OR ([zt] = @Original_zt)) AND ([Id] = @Original_Id))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_X", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "X", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_X", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "X", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Y", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Y", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Y", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Y", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Z", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Z", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Z", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Z", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_B", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "B", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_B", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "B", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_L", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "L", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_L", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "L", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_H", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "H", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_H", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "H", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Xgk", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Xgk", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Xgk", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Xgk", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ygk", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ygk", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ygk", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ygk", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ksi", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ksi", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ksi", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ksi", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_eta", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "eta", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_eta", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "eta", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_xt", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "xt", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_xt", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "xt", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_yt", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "yt", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_yt", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "yt", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_zt", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "zt", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_zt", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "zt", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [Transformacja] ([Nazwa], [X], [Y], [Z], [B], [L], [H], [Xgk], [Ygk]," +
+                " [ksi], [eta], [xt], [yt], [zt]) VALUES (@Nazwa, @X, @Y, @Z, @B, @L, @H, @Xgk, @" +
+                "Ygk, @ksi, @eta, @xt, @yt, @zt)";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nazwa", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nazwa", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@X", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "X", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Y", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Y", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Z", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Z", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@B", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "B", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@L", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "L", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@H", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "H", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Xgk", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Xgk", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ygk", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ygk", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ksi", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ksi", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@eta", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "eta", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@xt", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "xt", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@yt", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "yt", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@zt", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "zt", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Transformacja] SET [Nazwa] = @Nazwa, [X] = @X, [Y] = @Y, [Z] = @Z, [B] = @B, [L] = @L, [H] = @H, [Xgk] = @Xgk, [Ygk] = @Ygk, [ksi] = @ksi, [eta] = @eta, [xt] = @xt, [yt] = @yt, [zt] = @zt WHERE (((@IsNull_X = 1 AND [X] IS NULL) OR ([X] = @Original_X)) AND ((@IsNull_Y = 1 AND [Y] IS NULL) OR ([Y] = @Original_Y)) AND ((@IsNull_Z = 1 AND [Z] IS NULL) OR ([Z] = @Original_Z)) AND ((@IsNull_B = 1 AND [B] IS NULL) OR ([B] = @Original_B)) AND ((@IsNull_L = 1 AND [L] IS NULL) OR ([L] = @Original_L)) AND ((@IsNull_H = 1 AND [H] IS NULL) OR ([H] = @Original_H)) AND ((@IsNull_Xgk = 1 AND [Xgk] IS NULL) OR ([Xgk] = @Original_Xgk)) AND ((@IsNull_Ygk = 1 AND [Ygk] IS NULL) OR ([Ygk] = @Original_Ygk)) AND ((@IsNull_ksi = 1 AND [ksi] IS NULL) OR ([ksi] = @Original_ksi)) AND ((@IsNull_eta = 1 AND [eta] IS NULL) OR ([eta] = @Original_eta)) AND ((@IsNull_xt = 1 AND [xt] IS NULL) OR ([xt] = @Original_xt)) AND ((@IsNull_yt = 1 AND [yt] IS NULL) OR ([yt] = @Original_yt)) AND ((@IsNull_zt = 1 AND [zt] IS NULL) OR ([zt] = @Original_zt)) AND ([Id] = @Original_Id))";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nazwa", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nazwa", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@X", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "X", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Y", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Y", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Z", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Z", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@B", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "B", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@L", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "L", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@H", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "H", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Xgk", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Xgk", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ygk", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ygk", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ksi", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ksi", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@eta", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "eta", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@xt", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "xt", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@yt", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "yt", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@zt", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "zt", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_X", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "X", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_X", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "X", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Y", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Y", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Y", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Y", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Z", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Z", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Z", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Z", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_B", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "B", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_B", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "B", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_L", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "L", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_L", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "L", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_H", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "H", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_H", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "H", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Xgk", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Xgk", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Xgk", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Xgk", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ygk", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ygk", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ygk", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ygk", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ksi", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ksi", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ksi", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ksi", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_eta", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "eta", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_eta", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "eta", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_xt", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "xt", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_xt", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "xt", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_yt", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "yt", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_yt", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "yt", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_zt", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "zt", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_zt", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "zt", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::Inz.Properties.Settings.Default.Database1ConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT        Nazwa, X, Y, Z, B, L, H, Xgk, Ygk, ksi, eta, xt, yt, zt, Id\r\nFROM  " +
+                "          Transformacja";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(Database1DataSet.TransformacjaDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual Database1DataSet.TransformacjaDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            Database1DataSet.TransformacjaDataTable dataTable = new Database1DataSet.TransformacjaDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(Database1DataSet.TransformacjaDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(Database1DataSet dataSet) {
+            return this.Adapter.Update(dataSet, "Transformacja");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(global::System.Nullable<double> Original_X, global::System.Nullable<double> Original_Y, global::System.Nullable<double> Original_Z, global::System.Nullable<double> Original_B, global::System.Nullable<double> Original_L, global::System.Nullable<double> Original_H, global::System.Nullable<double> Original_Xgk, global::System.Nullable<double> Original_Ygk, global::System.Nullable<double> Original_ksi, global::System.Nullable<double> Original_eta, global::System.Nullable<double> Original_xt, global::System.Nullable<double> Original_yt, global::System.Nullable<double> Original_zt, int Original_Id) {
+            if ((Original_X.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((double)(Original_X.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Y.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((double)(Original_Y.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Z.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((double)(Original_Z.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((Original_B.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((double)(Original_B.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            if ((Original_L.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((double)(Original_L.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            if ((Original_H.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((double)(Original_H.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Xgk.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((double)(Original_Xgk.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Ygk.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((double)(Original_Ygk.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            if ((Original_ksi.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((double)(Original_ksi.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            if ((Original_eta.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[19].Value = ((double)(Original_eta.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            if ((Original_xt.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[21].Value = ((double)(Original_xt.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[21].Value = global::System.DBNull.Value;
+            }
+            if ((Original_yt.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[22].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[23].Value = ((double)(Original_yt.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[22].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[23].Value = global::System.DBNull.Value;
+            }
+            if ((Original_zt.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[24].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[25].Value = ((double)(Original_zt.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[24].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[25].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.DeleteCommand.Parameters[26].Value = ((int)(Original_Id));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(string Nazwa, global::System.Nullable<double> X, global::System.Nullable<double> Y, global::System.Nullable<double> Z, global::System.Nullable<double> B, global::System.Nullable<double> L, global::System.Nullable<double> H, global::System.Nullable<double> Xgk, global::System.Nullable<double> Ygk, global::System.Nullable<double> ksi, global::System.Nullable<double> eta, global::System.Nullable<double> xt, global::System.Nullable<double> yt, global::System.Nullable<double> zt) {
+            if ((Nazwa == null)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Nazwa));
+            }
+            if ((X.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((double)(X.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((Y.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((double)(Y.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Z.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((double)(Z.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((B.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((double)(B.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((L.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((double)(L.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((H.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((double)(H.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            if ((Xgk.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((double)(Xgk.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            if ((Ygk.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((double)(Ygk.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((ksi.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((double)(ksi.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            if ((eta.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[10].Value = ((double)(eta.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((xt.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((double)(xt.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((yt.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[12].Value = ((double)(yt.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            if ((zt.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[13].Value = ((double)(zt.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    string Nazwa, 
+                    global::System.Nullable<double> X, 
+                    global::System.Nullable<double> Y, 
+                    global::System.Nullable<double> Z, 
+                    global::System.Nullable<double> B, 
+                    global::System.Nullable<double> L, 
+                    global::System.Nullable<double> H, 
+                    global::System.Nullable<double> Xgk, 
+                    global::System.Nullable<double> Ygk, 
+                    global::System.Nullable<double> ksi, 
+                    global::System.Nullable<double> eta, 
+                    global::System.Nullable<double> xt, 
+                    global::System.Nullable<double> yt, 
+                    global::System.Nullable<double> zt, 
+                    global::System.Nullable<double> Original_X, 
+                    global::System.Nullable<double> Original_Y, 
+                    global::System.Nullable<double> Original_Z, 
+                    global::System.Nullable<double> Original_B, 
+                    global::System.Nullable<double> Original_L, 
+                    global::System.Nullable<double> Original_H, 
+                    global::System.Nullable<double> Original_Xgk, 
+                    global::System.Nullable<double> Original_Ygk, 
+                    global::System.Nullable<double> Original_ksi, 
+                    global::System.Nullable<double> Original_eta, 
+                    global::System.Nullable<double> Original_xt, 
+                    global::System.Nullable<double> Original_yt, 
+                    global::System.Nullable<double> Original_zt, 
+                    int Original_Id) {
+            if ((Nazwa == null)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Nazwa));
+            }
+            if ((X.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((double)(X.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((Y.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((double)(Y.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Z.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((double)(Z.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((B.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((double)(B.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((L.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((double)(L.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((H.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((double)(H.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            if ((Xgk.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((double)(Xgk.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            if ((Ygk.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((double)(Ygk.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((ksi.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((double)(ksi.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            if ((eta.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((double)(eta.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((xt.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((double)(xt.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((yt.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((double)(yt.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            if ((zt.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((double)(zt.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            if ((Original_X.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((double)(Original_X.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Y.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((double)(Original_Y.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Z.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((double)(Original_Z.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            if ((Original_B.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((double)(Original_B.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+            }
+            if ((Original_L.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((double)(Original_L.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
+            }
+            if ((Original_H.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((double)(Original_H.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Xgk.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((double)(Original_Xgk.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Ygk.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((double)(Original_Ygk.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
+            }
+            if ((Original_ksi.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((double)(Original_ksi.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
+            }
+            if ((Original_eta.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((double)(Original_eta.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[33].Value = global::System.DBNull.Value;
+            }
+            if ((Original_xt.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((double)(Original_xt.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[35].Value = global::System.DBNull.Value;
+            }
+            if ((Original_yt.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((double)(Original_yt.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[37].Value = global::System.DBNull.Value;
+            }
+            if ((Original_zt.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((double)(Original_zt.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[39].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[40].Value = ((int)(Original_Id));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class Wektory2TableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public Wektory2TableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "Wektory2";
+            tableMapping.ColumnMappings.Add("Id", "Id");
+            tableMapping.ColumnMappings.Add("Poczatek", "Poczatek");
+            tableMapping.ColumnMappings.Add("Koniec", "Koniec");
+            tableMapping.ColumnMappings.Add("DX", "DX");
+            tableMapping.ColumnMappings.Add("DY", "DY");
+            tableMapping.ColumnMappings.Add("DZ", "DZ");
+            tableMapping.ColumnMappings.Add("zrodlo", "zrodlo");
+            tableMapping.ColumnMappings.Add("x", "x");
+            tableMapping.ColumnMappings.Add("y", "y");
+            tableMapping.ColumnMappings.Add("z", "z");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Wektory2] WHERE (([Id] = @Original_Id) AND ((@IsNull_DX = 1 AND [DX] IS NULL) OR ([DX] = @Original_DX)) AND ((@IsNull_DY = 1 AND [DY] IS NULL) OR ([DY] = @Original_DY)) AND ((@IsNull_DZ = 1 AND [DZ] IS NULL) OR ([DZ] = @Original_DZ)) AND ((@IsNull_x = 1 AND [x] IS NULL) OR ([x] = @Original_x)) AND ((@IsNull_y = 1 AND [y] IS NULL) OR ([y] = @Original_y)) AND ((@IsNull_z = 1 AND [z] IS NULL) OR ([z] = @Original_z)))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DX", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DX", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DX", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DX", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DY", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DY", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DY", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DY", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DZ", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DZ", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DZ", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DZ", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_x", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "x", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_x", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "x", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_y", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "y", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_y", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "y", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_z", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "z", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_z", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "z", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [Wektory2] ([Poczatek], [Koniec], [DX], [DY], [DZ], [zrodlo], [x], [y" +
+                "], [z]) VALUES (@Poczatek, @Koniec, @DX, @DY, @DZ, @zrodlo, @x, @y, @z);\r\nSELECT" +
+                " Id, Poczatek, Koniec, DX, DY, DZ, zrodlo, x, y, z FROM Wektory2 WHERE (Id = SCO" +
+                "PE_IDENTITY())";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Poczatek", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Poczatek", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Koniec", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Koniec", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DX", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DX", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DY", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DY", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DZ", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DZ", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@zrodlo", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "zrodlo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@x", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "x", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@y", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "y", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@z", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "z", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Wektory2] SET [Poczatek] = @Poczatek, [Koniec] = @Koniec, [DX] = @DX, [DY] = @DY, [DZ] = @DZ, [zrodlo] = @zrodlo, [x] = @x, [y] = @y, [z] = @z WHERE (([Id] = @Original_Id) AND ((@IsNull_DX = 1 AND [DX] IS NULL) OR ([DX] = @Original_DX)) AND ((@IsNull_DY = 1 AND [DY] IS NULL) OR ([DY] = @Original_DY)) AND ((@IsNull_DZ = 1 AND [DZ] IS NULL) OR ([DZ] = @Original_DZ)) AND ((@IsNull_x = 1 AND [x] IS NULL) OR ([x] = @Original_x)) AND ((@IsNull_y = 1 AND [y] IS NULL) OR ([y] = @Original_y)) AND ((@IsNull_z = 1 AND [z] IS NULL) OR ([z] = @Original_z)));
+SELECT Id, Poczatek, Koniec, DX, DY, DZ, zrodlo, x, y, z FROM Wektory2 WHERE (Id = @Id)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Poczatek", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Poczatek", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Koniec", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Koniec", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DX", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DX", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DY", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DY", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DZ", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DZ", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@zrodlo", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "zrodlo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@x", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "x", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@y", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "y", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@z", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "z", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DX", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DX", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DX", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DX", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DY", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DY", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DY", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DY", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DZ", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DZ", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DZ", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DZ", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_x", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "x", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_x", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "x", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_y", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "y", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_y", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "y", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_z", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "z", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_z", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "z", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::Inz.Properties.Settings.Default.Database1ConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT        Id, Poczatek, Koniec, DX, DY, DZ, zrodlo, x, y, z\r\nFROM            " +
+                "Wektory2";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(Database1DataSet.Wektory2DataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual Database1DataSet.Wektory2DataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            Database1DataSet.Wektory2DataTable dataTable = new Database1DataSet.Wektory2DataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(Database1DataSet.Wektory2DataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(Database1DataSet dataSet) {
+            return this.Adapter.Update(dataSet, "Wektory2");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int Original_Id, global::System.Nullable<double> Original_DX, global::System.Nullable<double> Original_DY, global::System.Nullable<double> Original_DZ, global::System.Nullable<double> Original_x, global::System.Nullable<double> Original_y, global::System.Nullable<double> Original_z) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
+            if ((Original_DX.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((double)(Original_DX.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Original_DY.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((double)(Original_DY.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((Original_DZ.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((double)(Original_DZ.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            if ((Original_x.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((double)(Original_x.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((Original_y.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((double)(Original_y.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((Original_z.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((double)(Original_z.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(string Poczatek, string Koniec, global::System.Nullable<double> DX, global::System.Nullable<double> DY, global::System.Nullable<double> DZ, string zrodlo, global::System.Nullable<double> x, global::System.Nullable<double> y, global::System.Nullable<double> z) {
+            if ((Poczatek == null)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Poczatek));
+            }
+            if ((Koniec == null)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Koniec));
+            }
+            if ((DX.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((double)(DX.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((DY.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((double)(DY.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((DZ.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((double)(DZ.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((zrodlo == null)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(zrodlo));
+            }
+            if ((x.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((double)(x.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            if ((y.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((double)(y.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            if ((z.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((double)(z.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    string Poczatek, 
+                    string Koniec, 
+                    global::System.Nullable<double> DX, 
+                    global::System.Nullable<double> DY, 
+                    global::System.Nullable<double> DZ, 
+                    string zrodlo, 
+                    global::System.Nullable<double> x, 
+                    global::System.Nullable<double> y, 
+                    global::System.Nullable<double> z, 
+                    int Original_Id, 
+                    global::System.Nullable<double> Original_DX, 
+                    global::System.Nullable<double> Original_DY, 
+                    global::System.Nullable<double> Original_DZ, 
+                    global::System.Nullable<double> Original_x, 
+                    global::System.Nullable<double> Original_y, 
+                    global::System.Nullable<double> Original_z, 
+                    int Id) {
+            if ((Poczatek == null)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Poczatek));
+            }
+            if ((Koniec == null)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Koniec));
+            }
+            if ((DX.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((double)(DX.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((DY.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((double)(DY.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((DZ.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((double)(DZ.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((zrodlo == null)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(zrodlo));
+            }
+            if ((x.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((double)(x.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            if ((y.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((double)(y.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            if ((z.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((double)(z.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_Id));
+            if ((Original_DX.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((double)(Original_DX.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((Original_DY.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((double)(Original_DY.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            if ((Original_DZ.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((double)(Original_DZ.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            if ((Original_x.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((double)(Original_x.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            if ((Original_y.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((double)(Original_y.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            if ((Original_z.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((double)(Original_z.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[22].Value = ((int)(Id));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    string Poczatek, 
+                    string Koniec, 
+                    global::System.Nullable<double> DX, 
+                    global::System.Nullable<double> DY, 
+                    global::System.Nullable<double> DZ, 
+                    string zrodlo, 
+                    global::System.Nullable<double> x, 
+                    global::System.Nullable<double> y, 
+                    global::System.Nullable<double> z, 
+                    int Original_Id, 
+                    global::System.Nullable<double> Original_DX, 
+                    global::System.Nullable<double> Original_DY, 
+                    global::System.Nullable<double> Original_DZ, 
+                    global::System.Nullable<double> Original_x, 
+                    global::System.Nullable<double> Original_y, 
+                    global::System.Nullable<double> Original_z) {
+            return this.Update(Poczatek, Koniec, DX, DY, DZ, zrodlo, x, y, z, Original_Id, Original_DX, Original_DY, Original_DZ, Original_x, Original_y, Original_z, Original_Id);
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class RinexTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public RinexTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "Rinex";
+            tableMapping.ColumnMappings.Add("Id", "Id");
+            tableMapping.ColumnMappings.Add("Nazwa punktu", "Nazwa punktu");
+            tableMapping.ColumnMappings.Add("Numer punktu", "Numer punktu");
+            tableMapping.ColumnMappings.Add("Początek obserwacji", "Początek obserwacji");
+            tableMapping.ColumnMappings.Add("Koniec obserwacji", "Koniec obserwacji");
+            tableMapping.ColumnMappings.Add("Interwał", "Interwał");
+            tableMapping.ColumnMappings.Add("Sciezka", "Sciezka");
+            tableMapping.ColumnMappings.Add("Sciezka naw", "Sciezka naw");
+            tableMapping.ColumnMappings.Add("staly", "staly");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Rinex] WHERE (([Id] = @Original_Id) AND ((@IsNull_Początek_obserwacji = 1 AND [Początek obserwacji] IS NULL) OR ([Początek obserwacji] = @Original_Początek_obserwacji)) AND ((@IsNull_Koniec_obserwacji = 1 AND [Koniec obserwacji] IS NULL) OR ([Koniec obserwacji] = @Original_Koniec_obserwacji)) AND ((@IsNull_Interwał = 1 AND [Interwał] IS NULL) OR ([Interwał] = @Original_Interwał)) AND ((@IsNull_staly = 1 AND [staly] IS NULL) OR ([staly] = @Original_staly)))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Początek_obserwacji", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Początek obserwacji", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Początek_obserwacji", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Początek obserwacji", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Koniec_obserwacji", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Koniec obserwacji", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Koniec_obserwacji", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Koniec obserwacji", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Interwał", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Interwał", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Interwał", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Interwał", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_staly", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "staly", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_staly", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "staly", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Rinex] ([Nazwa punktu], [Numer punktu], [Początek obserwacji], [Koniec obserwacji], [Interwał], [Sciezka], [Sciezka naw], [staly]) VALUES (@Nazwa_punktu, @Numer_punktu, @Początek_obserwacji, @Koniec_obserwacji, @Interwał, @Sciezka, @Sciezka_naw, @staly);
+SELECT Id, [Nazwa punktu], [Numer punktu], [Początek obserwacji], [Koniec obserwacji], Interwał, Sciezka, [Sciezka naw], staly FROM Rinex WHERE (Id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nazwa_punktu", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nazwa punktu", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Numer_punktu", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Numer punktu", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Początek_obserwacji", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Początek obserwacji", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Koniec_obserwacji", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Koniec obserwacji", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Interwał", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Interwał", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sciezka", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sciezka", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sciezka_naw", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sciezka naw", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@staly", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "staly", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Rinex] SET [Nazwa punktu] = @Nazwa_punktu, [Numer punktu] = @Numer_punktu, [Początek obserwacji] = @Początek_obserwacji, [Koniec obserwacji] = @Koniec_obserwacji, [Interwał] = @Interwał, [Sciezka] = @Sciezka, [Sciezka naw] = @Sciezka_naw, [staly] = @staly WHERE (([Id] = @Original_Id) AND ((@IsNull_Początek_obserwacji = 1 AND [Początek obserwacji] IS NULL) OR ([Początek obserwacji] = @Original_Początek_obserwacji)) AND ((@IsNull_Koniec_obserwacji = 1 AND [Koniec obserwacji] IS NULL) OR ([Koniec obserwacji] = @Original_Koniec_obserwacji)) AND ((@IsNull_Interwał = 1 AND [Interwał] IS NULL) OR ([Interwał] = @Original_Interwał)) AND ((@IsNull_staly = 1 AND [staly] IS NULL) OR ([staly] = @Original_staly)));
+SELECT Id, [Nazwa punktu], [Numer punktu], [Początek obserwacji], [Koniec obserwacji], Interwał, Sciezka, [Sciezka naw], staly FROM Rinex WHERE (Id = @Id)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nazwa_punktu", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nazwa punktu", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Numer_punktu", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Numer punktu", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Początek_obserwacji", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Początek obserwacji", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Koniec_obserwacji", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Koniec obserwacji", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Interwał", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Interwał", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sciezka", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sciezka", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sciezka_naw", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sciezka naw", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@staly", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "staly", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Początek_obserwacji", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Początek obserwacji", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Początek_obserwacji", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Początek obserwacji", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Koniec_obserwacji", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Koniec obserwacji", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Koniec_obserwacji", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Koniec obserwacji", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Interwał", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Interwał", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Interwał", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Interwał", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_staly", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "staly", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_staly", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "staly", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::Inz.Properties.Settings.Default.Database1ConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT        Id, [Nazwa punktu], [Numer punktu], [Początek obserwacji], [Koniec " +
+                "obserwacji], Interwał, Sciezka, [Sciezka naw], staly\r\nFROM            Rinex";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(Database1DataSet.RinexDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual Database1DataSet.RinexDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            Database1DataSet.RinexDataTable dataTable = new Database1DataSet.RinexDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(Database1DataSet.RinexDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(Database1DataSet dataSet) {
+            return this.Adapter.Update(dataSet, "Rinex");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int Original_Id, global::System.Nullable<global::System.DateTime> Original_Początek_obserwacji, global::System.Nullable<global::System.DateTime> Original_Koniec_obserwacji, global::System.Nullable<double> Original_Interwał, global::System.Nullable<bool> Original_staly) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
+            if ((Original_Początek_obserwacji.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((System.DateTime)(Original_Początek_obserwacji.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Koniec_obserwacji.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((System.DateTime)(Original_Koniec_obserwacji.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Interwał.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((double)(Original_Interwał.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            if ((Original_staly.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((bool)(Original_staly.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(string Nazwa_punktu, string Numer_punktu, global::System.Nullable<global::System.DateTime> Początek_obserwacji, global::System.Nullable<global::System.DateTime> Koniec_obserwacji, global::System.Nullable<double> Interwał, string Sciezka, string Sciezka_naw, global::System.Nullable<bool> staly) {
+            if ((Nazwa_punktu == null)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Nazwa_punktu));
+            }
+            if ((Numer_punktu == null)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Numer_punktu));
+            }
+            if ((Początek_obserwacji.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(Początek_obserwacji.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Koniec_obserwacji.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(Koniec_obserwacji.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((Interwał.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((double)(Interwał.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((Sciezka == null)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Sciezka));
+            }
+            if ((Sciezka_naw == null)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(Sciezka_naw));
+            }
+            if ((staly.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((bool)(staly.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string Nazwa_punktu, string Numer_punktu, global::System.Nullable<global::System.DateTime> Początek_obserwacji, global::System.Nullable<global::System.DateTime> Koniec_obserwacji, global::System.Nullable<double> Interwał, string Sciezka, string Sciezka_naw, global::System.Nullable<bool> staly, int Original_Id, global::System.Nullable<global::System.DateTime> Original_Początek_obserwacji, global::System.Nullable<global::System.DateTime> Original_Koniec_obserwacji, global::System.Nullable<double> Original_Interwał, global::System.Nullable<bool> Original_staly, int Id) {
+            if ((Nazwa_punktu == null)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Nazwa_punktu));
+            }
+            if ((Numer_punktu == null)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Numer_punktu));
+            }
+            if ((Początek_obserwacji.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(Początek_obserwacji.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Koniec_obserwacji.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(Koniec_obserwacji.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((Interwał.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((double)(Interwał.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((Sciezka == null)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Sciezka));
+            }
+            if ((Sciezka_naw == null)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Sciezka_naw));
+            }
+            if ((staly.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((bool)(staly.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_Id));
+            if ((Original_Początek_obserwacji.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((System.DateTime)(Original_Początek_obserwacji.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Koniec_obserwacji.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((System.DateTime)(Original_Koniec_obserwacji.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Interwał.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((double)(Original_Interwał.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            if ((Original_staly.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((bool)(Original_staly.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(Id));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string Nazwa_punktu, string Numer_punktu, global::System.Nullable<global::System.DateTime> Początek_obserwacji, global::System.Nullable<global::System.DateTime> Koniec_obserwacji, global::System.Nullable<double> Interwał, string Sciezka, string Sciezka_naw, global::System.Nullable<bool> staly, int Original_Id, global::System.Nullable<global::System.DateTime> Original_Początek_obserwacji, global::System.Nullable<global::System.DateTime> Original_Koniec_obserwacji, global::System.Nullable<double> Original_Interwał, global::System.Nullable<bool> Original_staly) {
+            return this.Update(Nazwa_punktu, Numer_punktu, Początek_obserwacji, Koniec_obserwacji, Interwał, Sciezka, Sciezka_naw, staly, Original_Id, Original_Początek_obserwacji, Original_Koniec_obserwacji, Original_Interwał, Original_staly, Original_Id);
         }
     }
     
@@ -6995,6 +11352,12 @@ SELECT Id, poczatek, koniec, DX, DY, DZ, sdx, sdy, sdz, sdxy, sdyz, sdzx, ratio,
         private WspolrzedneTableAdapter _wspolrzedneTableAdapter;
         
         private WektoryTableAdapter _wektoryTableAdapter;
+        
+        private TransformacjaTableAdapter _transformacjaTableAdapter;
+        
+        private Wektory2TableAdapter _wektory2TableAdapter;
+        
+        private RinexTableAdapter _rinexTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -7097,6 +11460,48 @@ SELECT Id, poczatek, koniec, DX, DY, DZ, sdx, sdy, sdz, sdxy, sdyz, sdzx, ratio,
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public TransformacjaTableAdapter TransformacjaTableAdapter {
+            get {
+                return this._transformacjaTableAdapter;
+            }
+            set {
+                this._transformacjaTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public Wektory2TableAdapter Wektory2TableAdapter {
+            get {
+                return this._wektory2TableAdapter;
+            }
+            set {
+                this._wektory2TableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public RinexTableAdapter RinexTableAdapter {
+            get {
+                return this._rinexTableAdapter;
+            }
+            set {
+                this._rinexTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public bool BackupDataSetBeforeUpdate {
             get {
                 return this._backupDataSetBeforeUpdate;
@@ -7138,6 +11543,18 @@ SELECT Id, poczatek, koniec, DX, DY, DZ, sdx, sdy, sdz, sdxy, sdyz, sdzx, ratio,
                             && (this._wektoryTableAdapter.Connection != null))) {
                     return this._wektoryTableAdapter.Connection;
                 }
+                if (((this._transformacjaTableAdapter != null) 
+                            && (this._transformacjaTableAdapter.Connection != null))) {
+                    return this._transformacjaTableAdapter.Connection;
+                }
+                if (((this._wektory2TableAdapter != null) 
+                            && (this._wektory2TableAdapter.Connection != null))) {
+                    return this._wektory2TableAdapter.Connection;
+                }
+                if (((this._rinexTableAdapter != null) 
+                            && (this._rinexTableAdapter.Connection != null))) {
+                    return this._rinexTableAdapter.Connection;
+                }
                 return null;
             }
             set {
@@ -7167,6 +11584,15 @@ SELECT Id, poczatek, koniec, DX, DY, DZ, sdx, sdy, sdz, sdxy, sdyz, sdzx, ratio,
                     count = (count + 1);
                 }
                 if ((this._wektoryTableAdapter != null)) {
+                    count = (count + 1);
+                }
+                if ((this._transformacjaTableAdapter != null)) {
+                    count = (count + 1);
+                }
+                if ((this._wektory2TableAdapter != null)) {
+                    count = (count + 1);
+                }
+                if ((this._rinexTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -7234,6 +11660,33 @@ SELECT Id, poczatek, koniec, DX, DY, DZ, sdx, sdy, sdz, sdxy, sdyz, sdzx, ratio,
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._transformacjaTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Transformacja.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._transformacjaTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._wektory2TableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Wektory2.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._wektory2TableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._rinexTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Rinex.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._rinexTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             return result;
         }
         
@@ -7292,6 +11745,30 @@ SELECT Id, poczatek, koniec, DX, DY, DZ, sdx, sdy, sdz, sdxy, sdyz, sdzx, ratio,
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._transformacjaTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Transformacja.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._transformacjaTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._wektory2TableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Wektory2.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._wektory2TableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._rinexTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Rinex.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._rinexTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             return result;
         }
         
@@ -7302,6 +11779,30 @@ SELECT Id, poczatek, koniec, DX, DY, DZ, sdx, sdy, sdz, sdxy, sdyz, sdzx, ratio,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateDeletedRows(Database1DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
+            if ((this._rinexTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Rinex.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._rinexTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._wektory2TableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Wektory2.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._wektory2TableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._transformacjaTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Transformacja.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._transformacjaTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._wektoryTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Wektory.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -7419,6 +11920,21 @@ SELECT Id, poczatek, koniec, DX, DY, DZ, sdx, sdy, sdz, sdxy, sdyz, sdzx, ratio,
                 throw new global::System.ArgumentException("Dla wszystkich obiektów TableAdapter, którymi zarządza obiekt TableAdapterManager" +
                         ", muszą być używane te same parametry połączenia.");
             }
+            if (((this._transformacjaTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._transformacjaTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("Dla wszystkich obiektów TableAdapter, którymi zarządza obiekt TableAdapterManager" +
+                        ", muszą być używane te same parametry połączenia.");
+            }
+            if (((this._wektory2TableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._wektory2TableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("Dla wszystkich obiektów TableAdapter, którymi zarządza obiekt TableAdapterManager" +
+                        ", muszą być używane te same parametry połączenia.");
+            }
+            if (((this._rinexTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._rinexTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("Dla wszystkich obiektów TableAdapter, którymi zarządza obiekt TableAdapterManager" +
+                        ", muszą być używane te same parametry połączenia.");
+            }
             global::System.Data.IDbConnection workConnection = this.Connection;
             if ((workConnection == null)) {
                 throw new global::System.ApplicationException("Obiekt TableAdapterManager nie zawiera informacji o połączeniu. Ustaw dla każdej " +
@@ -7506,6 +12022,33 @@ SELECT Id, poczatek, koniec, DX, DY, DZ, sdx, sdy, sdz, sdxy, sdyz, sdzx, ratio,
                         adaptersWithAcceptChangesDuringUpdate.Add(this._wektoryTableAdapter.Adapter);
                     }
                 }
+                if ((this._transformacjaTableAdapter != null)) {
+                    revertConnections.Add(this._transformacjaTableAdapter, this._transformacjaTableAdapter.Connection);
+                    this._transformacjaTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._transformacjaTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._transformacjaTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._transformacjaTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._transformacjaTableAdapter.Adapter);
+                    }
+                }
+                if ((this._wektory2TableAdapter != null)) {
+                    revertConnections.Add(this._wektory2TableAdapter, this._wektory2TableAdapter.Connection);
+                    this._wektory2TableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._wektory2TableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._wektory2TableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._wektory2TableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._wektory2TableAdapter.Adapter);
+                    }
+                }
+                if ((this._rinexTableAdapter != null)) {
+                    revertConnections.Add(this._rinexTableAdapter, this._rinexTableAdapter.Connection);
+                    this._rinexTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._rinexTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._rinexTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._rinexTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._rinexTableAdapter.Adapter);
+                    }
+                }
                 // 
                 //---- Perform updates -----------
                 //
@@ -7587,6 +12130,18 @@ SELECT Id, poczatek, koniec, DX, DY, DZ, sdx, sdy, sdz, sdxy, sdyz, sdzx, ratio,
                 if ((this._wektoryTableAdapter != null)) {
                     this._wektoryTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._wektoryTableAdapter]));
                     this._wektoryTableAdapter.Transaction = null;
+                }
+                if ((this._transformacjaTableAdapter != null)) {
+                    this._transformacjaTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._transformacjaTableAdapter]));
+                    this._transformacjaTableAdapter.Transaction = null;
+                }
+                if ((this._wektory2TableAdapter != null)) {
+                    this._wektory2TableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._wektory2TableAdapter]));
+                    this._wektory2TableAdapter.Transaction = null;
+                }
+                if ((this._rinexTableAdapter != null)) {
+                    this._rinexTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._rinexTableAdapter]));
+                    this._rinexTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

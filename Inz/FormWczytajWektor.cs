@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -12,6 +13,7 @@ using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace Inz
 {
@@ -39,83 +41,98 @@ namespace Inz
                 progressbar(sumadlugosci);
                 foreach (String file in openFileDialog1.FileNames)
                 {
-                    bool flag1 = false;
 
-                    using (var sr = new StreamReader(file))
-                    {
-                        bool flag2 = false;
-                        string poczatek="";
-                        string koniec="";
-                        var sciezka = Regex.Split(openFileDialog1.FileName, @"\\");
-                        string nazwapliku = sciezka.Last();
-                        var skladowe = nazwapliku.Split('-');
-                        if (skladowe.Length == 2) 
-                        {
-                            poczatek = skladowe[0];
-                            var drugi = skladowe[1].Split('.');
-                            koniec = drugi[0];
-                            flag2 = true;//potrzeban do wyboru insert w adapterze
-                        }
-                        string wiersz;
-                        double DX=0, DY=0, DZ=0;
-                        double sumasdx = 0, sumasdy = 0, sumasdz = 0, sumasdxy = 0, sumasdyz = 0, sumasdzx=0, sumaratio=0;
-                        int i = 0;
-                        while ((wiersz = sr.ReadLine()) != null)
-                        {
-                            toolStripProgressBar1.Increment(1);
-                            if (flag1)
-                            {
-
-                                if (Convert.ToInt32(new string(wiersz.ToCharArray(71, 1))) == 1)
-                                {
-                                    wiersz = wiersz.Replace(".", ",");
-                                    DX += Convert.ToDouble(new string(wiersz.ToCharArray(26, 15)));
-                                    DY += Convert.ToDouble(new string(wiersz.ToCharArray(41, 15)));
-                                    DZ += Convert.ToDouble(new string(wiersz.ToCharArray(56, 15)));
-                                    sumasdx+= Convert.ToDouble(new string(wiersz.ToCharArray(79, 7)));
-                                    sumasdy+= Convert.ToDouble(new string(wiersz.ToCharArray(88, 7)));
-                                    sumasdz+= Convert.ToDouble(new string(wiersz.ToCharArray(97, 7)));
-                                    sumasdxy+= Convert.ToDouble(new string(wiersz.ToCharArray(106, 7)));
-                                    sumasdyz+= Convert.ToDouble(new string(wiersz.ToCharArray(115, 7)));
-                                    sumasdzx+= Convert.ToDouble(new string(wiersz.ToCharArray(124, 7)));
-                                    sumaratio+= Convert.ToDouble(new string(wiersz.ToCharArray(139, 5)));
-                                    i++;
-                                }
-
-                            }
-
-                            if (wiersz.Contains("%  GPST"))
-                            {
-                                flag1 = true;
-                            }
-
-                        }
-                        DX = DX/i;
-                        DY = DY/i;
-                        DZ = DZ/i;
-                        var sdx = Math.Sqrt(Math.Pow(sumasdx, 2)/i);
-                        var sdy = Math.Sqrt(Math.Pow(sumasdy, 2) / i);
-                        var sdz = Math.Sqrt(Math.Pow(sumasdz, 2) / i);
-                        var sdxy = Math.Sqrt(Math.Pow(sumasdxy, 2) / i);
-                        var sdyz = Math.Sqrt(Math.Pow(sumasdyz, 2) / i);
-                        var sdzx = Math.Sqrt(Math.Pow(sumasdzx, 2) / i);
-                        var ratio = sumaratio/i;
-                        var index = wektoryBindingSource.Count;
-                        if (flag2)
-                        {
-                            wektoryTableAdapter.Insert(poczatek, koniec, DX, DY, DZ,sdx,sdy,sdz,sdxy,sdyz,sdzx,ratio,file);
-                        }
-                        else
-                        {
-                            wektoryTableAdapter.Insert(null, null, DX, DY, DZ, sdx, sdy, sdz, sdxy, sdyz, sdzx, ratio, file);
-                        }
-                        wczytaj.Text = "Wczytaj";
-
-                        break;
-                    }
+                    ladowanieDoTabeli(file);
+                    
                 }
                 wektoryTableAdapter.Fill(database1DataSet.Wektory);
                 toolStripProgressBar1.Maximum = 0;
+            }
+        }
+
+        private void ladowanieDoTabeli(string file)
+        {
+            bool flag1 = false;
+
+            using (var sr = new StreamReader(file))
+            {
+                bool flag2 = false;
+                string poczatek = "";
+                string koniec = "";
+                var sciezka = Regex.Split(file, @"\\");
+                string nazwapliku = sciezka.Last();
+                var skladowe = nazwapliku.Split('-');
+                if (skladowe.Length == 2)
+                {
+                    poczatek = skladowe[0];
+                    var drugi = skladowe[1].Split('.');
+                    koniec = drugi[0];
+                    flag2 = true; //potrzeban do wyboru insert w adapterze
+                }
+                string wiersz;
+                double DX = 0, DY = 0, DZ = 0;
+                double sumasdx = 0, sumasdy = 0, sumasdz = 0, sumasdxy = 0, sumasdyz = 0, sumasdzx = 0, sumaratio = 0;
+                int i = 0;
+                int n = 0;
+
+
+                while ((wiersz = sr.ReadLine()) != null)
+                {
+                    toolStripProgressBar1.Increment(1);
+                    if (flag1)
+                    {
+
+                        if (Convert.ToInt32(new string(wiersz.ToCharArray(71, 1))) == 1)
+                        {
+                            wiersz = wiersz.Replace(".", ",");
+                            DX += Convert.ToDouble(new string(wiersz.ToCharArray(26, 15)));
+                            DY += Convert.ToDouble(new string(wiersz.ToCharArray(41, 15)));
+                            DZ += Convert.ToDouble(new string(wiersz.ToCharArray(56, 15)));
+                            sumasdx += Convert.ToDouble(new string(wiersz.ToCharArray(79, 7)));
+                            sumasdy += Convert.ToDouble(new string(wiersz.ToCharArray(88, 7)));
+                            sumasdz += Convert.ToDouble(new string(wiersz.ToCharArray(97, 7)));
+                            sumasdxy += Convert.ToDouble(new string(wiersz.ToCharArray(106, 7)));
+                            sumasdyz += Convert.ToDouble(new string(wiersz.ToCharArray(115, 7)));
+                            sumasdzx += Convert.ToDouble(new string(wiersz.ToCharArray(124, 7)));
+                            sumaratio += Convert.ToDouble(new string(wiersz.ToCharArray(139, 5)));
+                            i++;
+                        }
+                        else
+                        {
+                            n++;
+                        }
+
+                    }
+
+                    if (wiersz.Contains("%  GPST"))
+                    {
+                        flag1 = true;
+                    }
+
+                }
+                DX = DX/i;
+                DY = DY/i;
+                DZ = DZ/i;
+                var sdx = Math.Sqrt(Math.Pow(sumasdx, 2)/i);
+                var sdy = Math.Sqrt(Math.Pow(sumasdy, 2)/i);
+                var sdz = Math.Sqrt(Math.Pow(sumasdz, 2)/i);
+                var sdxy = Math.Sqrt(Math.Pow(sumasdxy, 2)/i);
+                var sdyz = Math.Sqrt(Math.Pow(sumasdyz, 2)/i);
+                var sdzx = Math.Sqrt(Math.Pow(sumasdzx, 2)/i);
+                var ratio = sumaratio/i;
+                var index = wektoryBindingSource.Count;
+                if (flag2)
+                {
+                    wektoryTableAdapter.Insert(poczatek, koniec, DX, DY, DZ, sdx, sdy, sdz, sdxy, sdyz, sdzx, ratio,
+                        file, i, n);
+                }
+                else
+                {
+                    wektoryTableAdapter.Insert(null, null, DX, DY, DZ, sdx, sdy, sdz, sdxy, sdyz, sdzx, ratio, file, i,
+                        n);
+                }
+                wczytaj.Text = "Wczytaj";
+
             }
         }
 
@@ -213,5 +230,72 @@ namespace Inz
             var max2 = (int) max+2;
             toolStripProgressBar1.Maximum = max2;
         }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            obliczZRtkliba();
+        }
+
+        private void obliczZRtkliba()
+        {
+            rinexTableAdapter1.Fill(database1DataSet.Rinex);
+            var stale = database1DataSet.Rinex.Where(punkt => punkt.staly.Equals(true));
+            var wyznaczane = database1DataSet.Rinex.Where(punkt => punkt.staly.Equals(false));
+            var ustawienia = Properties.Settings.Default;
+           List<string > sciezki= new List<string>();
+            foreach (var rowStaly in stale)
+            {
+                foreach (var rowWyznaczany in wyznaczane)
+                {
+                    string output = ustawienia.outputPath +@"\"+ rowStaly.Nazwa_punktu + "-" + rowWyznaczany.Nazwa_punktu+".pos";
+                    LaunchCommandLineApp(rowWyznaczany.Sciezka,rowStaly.Sciezka,rowStaly.Sciezka_naw,output);
+                    sciezki.Add(output);
+                }
+            }
+            foreach (var pkt in sciezki)
+            {
+                ladowanieDoTabeli(pkt);
+            }
+            wektoryTableAdapter.Fill(database1DataSet.Wektory);
+        }
+        void LaunchCommandLineApp(string rover ,string base1,string navbase,string output)
+        {
+
+            string @program = @Properties.Settings.Default.rtklibPath;
+             @rover = rover.Replace(@"\\", @"\");
+            string @baza = base1.Replace(@"\\", @"\");
+            string @nav = @navbase.Replace(@"\\", @"\");
+            string @config = Properties.Settings.Default.config;
+            @config = @config.Replace(@"\\", @"\");
+            string @arguments = @"-k " + "\"" + @config + "\"" + @" -o "+ "\"" +output+"\""  + " \"" + rover + "\" " + "\"" + baza + "\" " + "\"" + nav + "\"" ;
+            // Use ProcessStartInfo class
+            ProcessStartInfo startInfo = new ProcessStartInfo();
+            startInfo.CreateNoWindow = false;
+            startInfo.UseShellExecute = false;
+            startInfo.FileName = program;
+            startInfo.WindowStyle = ProcessWindowStyle.Normal;
+            startInfo.Arguments = @arguments;
+            try
+            {
+
+                // Start the process with the info we specified.
+                // Call WaitForExit and then the using statement will close.
+                using (Process exeProcess = Process.Start(startInfo))
+                {
+                    exeProcess.WaitForExit();
+                    //exeProcess.WaitForExit();
+                }
+            }
+            catch
+            {
+                // Log error.
+            }
+        }
+
     }
 }

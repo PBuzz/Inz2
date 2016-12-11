@@ -92,6 +92,12 @@
     <Compile Include="FormDodajBLH.Designer.cs">
       <DependentUpon>FormDodajBLH.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormRinex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRinex.Designer.cs">
+      <DependentUpon>FormRinex.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormSzkic.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +127,18 @@
     </Compile>
     <Compile Include="FormWczytajWektor.Designer.cs">
       <DependentUpon>FormWczytajWektor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormWyrownanie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWyrownanie.Designer.cs">
+      <DependentUpon>FormWyrownanie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormXX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormXX.Designer.cs">
+      <DependentUpon>FormXX.cs</DependentUpon>
     </Compile>
     <Compile Include="Odczyt.cs" />
     <Compile Include="Main.cs">
@@ -161,11 +179,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RichTextBoxExtensions.cs" />
     <Compile Include="Transformacja.cs" />
     <Compile Include="Wspprzyb.cs" />
     <Compile Include="XYZ.cs" />
     <EmbeddedResource Include="FormDodajBLH.resx">
       <DependentUpon>FormDodajBLH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRinex.resx">
+      <DependentUpon>FormRinex.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSzkic.resx">
       <DependentUpon>FormSzkic.cs</DependentUpon>
@@ -178,6 +200,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormWczytajWektor.resx">
       <DependentUpon>FormWczytajWektor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormXX.resx">
+      <DependentUpon>FormXX.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
@@ -208,6 +233,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Database1DataSet.xsc">
       <DependentUpon>Database1DataSet.xsd</DependentUpon>
@@ -231,6 +257,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\konfig.conf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
