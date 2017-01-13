@@ -35,11 +35,6 @@
             this.wspolrzedneTableAdapter = new Inz.Database1DataSetTableAdapters.WspolrzedneTableAdapter();
             this.tableAdapterManager = new Inz.Database1DataSetTableAdapters.TableAdapterManager();
             this.wspolrzedneDataGridView = new System.Windows.Forms.DataGridView();
-            this.KolumnaNazwa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.KolumnaX = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.KolumnaY = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.KolumnaH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Staly = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
@@ -53,8 +48,14 @@
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.wspolrzedneBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.wspolrzedneBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.menuStripwspolrzedne = new System.Windows.Forms.MenuStrip();
             this.dodajBLHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.KolumnaNazwa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KolumnaX = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KolumnaY = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Z = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Staly = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.wspolrzedneBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wspolrzedneDataGridView)).BeginInit();
@@ -83,8 +84,11 @@
             this.tableAdapterManager.DlugosciTableAdapter = null;
             this.tableAdapterManager.KatyTableAdapter = null;
             this.tableAdapterManager.PunktyNieznaneTableAdapter = null;
+            this.tableAdapterManager.RinexTableAdapter = null;
             this.tableAdapterManager.TachimetrTableAdapter = null;
+            this.tableAdapterManager.TransformacjaTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Inz.Database1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.Wektory2TableAdapter = null;
             this.tableAdapterManager.WektoryTableAdapter = null;
             this.tableAdapterManager.WspolrzedneTableAdapter = this.wspolrzedneTableAdapter;
             // 
@@ -96,45 +100,16 @@
             this.KolumnaNazwa,
             this.KolumnaX,
             this.KolumnaY,
-            this.KolumnaH,
+            this.Z,
             this.Staly});
             this.wspolrzedneDataGridView.DataSource = this.wspolrzedneBindingSource;
             this.wspolrzedneDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.wspolrzedneDataGridView.Location = new System.Drawing.Point(0, 49);
+            this.wspolrzedneDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.wspolrzedneDataGridView.Name = "wspolrzedneDataGridView";
-            this.wspolrzedneDataGridView.Size = new System.Drawing.Size(549, 391);
+            this.wspolrzedneDataGridView.Size = new System.Drawing.Size(732, 493);
             this.wspolrzedneDataGridView.TabIndex = 1;
             this.wspolrzedneDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.wspolrzedneDataGridView_DataError);
-            // 
-            // KolumnaNazwa
-            // 
-            this.KolumnaNazwa.DataPropertyName = "Nazwa";
-            this.KolumnaNazwa.HeaderText = "Nazwa";
-            this.KolumnaNazwa.Name = "KolumnaNazwa";
-            // 
-            // KolumnaX
-            // 
-            this.KolumnaX.DataPropertyName = "X";
-            this.KolumnaX.HeaderText = "X";
-            this.KolumnaX.Name = "KolumnaX";
-            // 
-            // KolumnaY
-            // 
-            this.KolumnaY.DataPropertyName = "Y";
-            this.KolumnaY.HeaderText = "Y";
-            this.KolumnaY.Name = "KolumnaY";
-            // 
-            // KolumnaH
-            // 
-            this.KolumnaH.DataPropertyName = "H";
-            this.KolumnaH.HeaderText = "H";
-            this.KolumnaH.Name = "KolumnaH";
-            // 
-            // Staly
-            // 
-            this.Staly.DataPropertyName = "Staly";
-            this.Staly.HeaderText = "Stały";
-            this.Staly.Name = "Staly";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -164,7 +139,7 @@
             this.bindingNavigatorPositionItem.AccessibleName = "Pozycja";
             this.bindingNavigatorPositionItem.AutoSize = false;
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(65, 23);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Bieżąca pozycja";
             // 
@@ -248,7 +223,8 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.wspolrzedneBindingNavigatorSaveItem});
+            this.wspolrzedneBindingNavigatorSaveItem,
+            this.toolStripButton1});
             this.wspolrzedneBindingNavigator.Location = new System.Drawing.Point(0, 24);
             this.wspolrzedneBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.wspolrzedneBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -256,9 +232,19 @@
             this.wspolrzedneBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.wspolrzedneBindingNavigator.Name = "wspolrzedneBindingNavigator";
             this.wspolrzedneBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.wspolrzedneBindingNavigator.Size = new System.Drawing.Size(549, 25);
+            this.wspolrzedneBindingNavigator.Size = new System.Drawing.Size(732, 25);
             this.wspolrzedneBindingNavigator.TabIndex = 0;
             this.wspolrzedneBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // menuStripwspolrzedne
             // 
@@ -267,7 +253,8 @@
             this.dodajBLHToolStripMenuItem});
             this.menuStripwspolrzedne.Location = new System.Drawing.Point(0, 0);
             this.menuStripwspolrzedne.Name = "menuStripwspolrzedne";
-            this.menuStripwspolrzedne.Size = new System.Drawing.Size(549, 24);
+            this.menuStripwspolrzedne.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.menuStripwspolrzedne.Size = new System.Drawing.Size(732, 24);
             this.menuStripwspolrzedne.TabIndex = 2;
             this.menuStripwspolrzedne.Text = "menuStrip1";
             // 
@@ -278,15 +265,46 @@
             this.dodajBLHToolStripMenuItem.Text = "Dodaj BLH";
             this.dodajBLHToolStripMenuItem.Click += new System.EventHandler(this.dodajBLHToolStripMenuItem_Click);
             // 
+            // KolumnaNazwa
+            // 
+            this.KolumnaNazwa.DataPropertyName = "Nazwa";
+            this.KolumnaNazwa.HeaderText = "Nazwa";
+            this.KolumnaNazwa.Name = "KolumnaNazwa";
+            // 
+            // KolumnaX
+            // 
+            this.KolumnaX.DataPropertyName = "X";
+            this.KolumnaX.HeaderText = "X";
+            this.KolumnaX.Name = "KolumnaX";
+            // 
+            // KolumnaY
+            // 
+            this.KolumnaY.DataPropertyName = "Y";
+            this.KolumnaY.HeaderText = "Y";
+            this.KolumnaY.Name = "KolumnaY";
+            // 
+            // Z
+            // 
+            this.Z.DataPropertyName = "Z";
+            this.Z.HeaderText = "Z";
+            this.Z.Name = "Z";
+            // 
+            // Staly
+            // 
+            this.Staly.DataPropertyName = "Staly";
+            this.Staly.HeaderText = "Stały";
+            this.Staly.Name = "Staly";
+            // 
             // FormWspolrzedne
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(549, 440);
+            this.ClientSize = new System.Drawing.Size(732, 542);
             this.Controls.Add(this.wspolrzedneDataGridView);
             this.Controls.Add(this.wspolrzedneBindingNavigator);
             this.Controls.Add(this.menuStripwspolrzedne);
             this.MainMenuStrip = this.menuStripwspolrzedne;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormWspolrzedne";
             this.Text = "FormWspolrzedne";
             this.Load += new System.EventHandler(this.FormWspolrzedne_Load);
@@ -323,12 +341,14 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
         private System.Windows.Forms.ToolStripButton wspolrzedneBindingNavigatorSaveItem;
         private System.Windows.Forms.BindingNavigator wspolrzedneBindingNavigator;
+        private System.Windows.Forms.DataGridViewTextBoxColumn KolumnaH;
+        private System.Windows.Forms.MenuStrip menuStripwspolrzedne;
+        private System.Windows.Forms.ToolStripMenuItem dodajBLHToolStripMenuItem;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.DataGridViewTextBoxColumn KolumnaNazwa;
         private System.Windows.Forms.DataGridViewTextBoxColumn KolumnaX;
         private System.Windows.Forms.DataGridViewTextBoxColumn KolumnaY;
-        private System.Windows.Forms.DataGridViewTextBoxColumn KolumnaH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Z;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Staly;
-        private System.Windows.Forms.MenuStrip menuStripwspolrzedne;
-        private System.Windows.Forms.ToolStripMenuItem dodajBLHToolStripMenuItem;
     }
 }

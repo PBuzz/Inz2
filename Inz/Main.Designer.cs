@@ -40,12 +40,13 @@
             this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.azymutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.test2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rinexToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.database1DataSet = new Inz.Database1DataSet();
             this.tachimetrBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tachimetrTableAdapter = new Inz.Database1DataSetTableAdapters.TachimetrTableAdapter();
-            this.rinexToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.wyrównanieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tachimetrBindingSource)).BeginInit();
@@ -62,10 +63,12 @@
             this.testToolStripMenuItem,
             this.azymutToolStripMenuItem,
             this.test2ToolStripMenuItem,
-            this.rinexToolStripMenuItem});
+            this.rinexToolStripMenuItem,
+            this.wyrównanieToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1066, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1421, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -143,11 +146,19 @@
             this.test2ToolStripMenuItem.Text = "Test2";
             this.test2ToolStripMenuItem.Click += new System.EventHandler(this.test2ToolStripMenuItem_Click);
             // 
+            // rinexToolStripMenuItem
+            // 
+            this.rinexToolStripMenuItem.Name = "rinexToolStripMenuItem";
+            this.rinexToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
+            this.rinexToolStripMenuItem.Text = "Rinex";
+            this.rinexToolStripMenuItem.Click += new System.EventHandler(this.rinexToolStripMenuItem_Click);
+            // 
             // statusStrip1
             // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 636);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 788);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1066, 22);
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(1421, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -169,23 +180,24 @@
             // 
             this.tachimetrTableAdapter.ClearBeforeFill = true;
             // 
-            // rinexToolStripMenuItem
+            // wyrównanieToolStripMenuItem
             // 
-            this.rinexToolStripMenuItem.Name = "rinexToolStripMenuItem";
-            this.rinexToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
-            this.rinexToolStripMenuItem.Text = "Rinex";
-            this.rinexToolStripMenuItem.Click += new System.EventHandler(this.rinexToolStripMenuItem_Click);
+            this.wyrównanieToolStripMenuItem.Name = "wyrównanieToolStripMenuItem";
+            this.wyrównanieToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
+            this.wyrównanieToolStripMenuItem.Text = "Wyrównanie";
+            this.wyrównanieToolStripMenuItem.Click += new System.EventHandler(this.wyrównanieToolStripMenuItem_Click);
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1066, 658);
+            this.ClientSize = new System.Drawing.Size(1421, 810);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Main";
             this.Text = "Inz";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -217,6 +229,7 @@
         private System.Windows.Forms.ToolStripMenuItem ustawieniaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem test2ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rinexToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem wyrównanieToolStripMenuItem;
     }
 }
 

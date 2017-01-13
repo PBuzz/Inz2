@@ -92,6 +92,12 @@
     <Compile Include="FormDodajBLH.Designer.cs">
       <DependentUpon>FormDodajBLH.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormKonfigRTKLib.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKonfigRTKLib.Designer.cs">
+      <DependentUpon>FormKonfigRTKLib.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormRinex.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,12 @@
     <Compile Include="FormTest2.Designer.cs">
       <DependentUpon>FormTest2.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTworzWektor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTworzWektor.Designer.cs">
+      <DependentUpon>FormTworzWektor.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUstawienia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,12 +145,6 @@
     </Compile>
     <Compile Include="FormWyrownanie.Designer.cs">
       <DependentUpon>FormWyrownanie.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormXX.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormXX.Designer.cs">
-      <DependentUpon>FormXX.cs</DependentUpon>
     </Compile>
     <Compile Include="Odczyt.cs" />
     <Compile Include="Main.cs">
@@ -186,6 +192,9 @@
     <EmbeddedResource Include="FormDodajBLH.resx">
       <DependentUpon>FormDodajBLH.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormKonfigRTKLib.resx">
+      <DependentUpon>FormKonfigRTKLib.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormRinex.resx">
       <DependentUpon>FormRinex.cs</DependentUpon>
     </EmbeddedResource>
@@ -195,14 +204,17 @@
     <EmbeddedResource Include="FormTest2.resx">
       <DependentUpon>FormTest2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormTworzWektor.resx">
+      <DependentUpon>FormTworzWektor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormUstawienia.resx">
       <DependentUpon>FormUstawienia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormWczytajWektor.resx">
       <DependentUpon>FormWczytajWektor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormXX.resx">
-      <DependentUpon>FormXX.cs</DependentUpon>
+    <EmbeddedResource Include="FormWyrownanie.resx">
+      <DependentUpon>FormWyrownanie.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>

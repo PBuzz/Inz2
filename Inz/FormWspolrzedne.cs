@@ -57,6 +57,9 @@ namespace Inz
             dodajblh.MdiParent = this.MdiParent;
         }
 
-
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            this.wspolrzedneTableAdapter.Fill(this.database1DataSet.Wspolrzedne);
+        }
     }
 }

@@ -150,5 +150,12 @@ namespace Inz
             rinex1.MdiParent = this;
             rinex1.Show();
         }
+
+        private void wyrównanieToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form wyr = new FormWyrownanie();
+            wyr.MdiParent = this;
+            wyr.Show();
+        }
     }
 }

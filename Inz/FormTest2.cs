@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MathNet.Numerics.LinearAlgebra;
 using MathNet.Numerics.LinearAlgebra.Double;
+using M=System.Math;
 
 namespace Inz
 {
@@ -86,33 +87,49 @@ namespace Inz
                         modultransformacji.odczytBL(fi,lambda,out ksi,out eta);
                         transformacjaTableAdapter.Insert(row[1].ToString(),X,Y,Z,fi,lambda,h,xGk,yGk,ksi,eta,null,null,null);
                     }
-                    ;
+                    
                 }
                
 
+                this.transformacjaTableAdapter.Fill(this.database1DataSet.Transformacja);
+                bool czyjuż = false;
                 this.wektoryTableAdapter.Fill(this.database1DataSet.Wektory);
-                foreach (DataRow row in database1DataSet.Wektory.Rows)
+                while (czyjuż!=true)
                 {
-                    bool nazwapkt = database1DataSet.Transformacja.Any(punkt => punkt.Nazwa.Equals(row[1]));
-                    if (nazwapkt == false)
+                    czyjuż = true;
+                    foreach (DataRow row in database1DataSet.Wektory.Rows)
                     {
-                        var nazwa = row["koniec"].ToString();
-                        var X = (double) row["DX"];
-                        var Y = (double) row["DY"];
-                        var Z = (double) row["DZ"];
-                        var a = Properties.Settings.Default.elipsoida_a;
-                        var b = Properties.Settings.Default.elipsoida_b;
-                        var f = Properties.Settings.Default.elipsoida_f;
-                        double fi, lambda, h, xGk, yGk, ksi, eta;
-                        modultransformacji.Hirvonen(X, Y, Z, a, b, out fi, out lambda, out h);
-                        modultransformacji.GaussKruger1(fi, lambda, lambda, out xGk, out yGk);
-                        modultransformacji.odczytBL(fi, lambda, out ksi, out eta);
-                        transformacjaTableAdapter.Insert(nazwa, X, Y, Z, fi, lambda, h, xGk, yGk, ksi, eta, null, null,
-                            null);
 
+                        var nazwaRover = row["koniec"].ToString();
+                        var nazwaBaza = row["poczatek"].ToString();
+                        bool istnieje = database1DataSet.Transformacja.Any(punkt => punkt.Nazwa.Equals(nazwaRover));
+                        DataRow wspBazy = database1DataSet.Transformacja.Where(rowcel => rowcel.Nazwa.Equals(nazwaBaza)).FirstOrDefault();
+                        if (wspBazy != null&&istnieje!=true)
+                        {
+                            var DX = (double)row["DX"];
+                            var DY = (double)row["DY"];
+                            var DZ = (double)row["DZ"];
+                            var X = (double) wspBazy["X"] + DX;
+                            var Y = (double)wspBazy["Y"] + DY;
+                            var Z = (double)wspBazy["Z"] + DZ;
+                            var a = Properties.Settings.Default.elipsoida_a;
+                            var b = Properties.Settings.Default.elipsoida_b;
+                            var f = Properties.Settings.Default.elipsoida_f;
+                            double fi, lambda, h, xGk, yGk, ksi, eta;
+                            modultransformacji.Hirvonen(X, Y, Z, a, b, out fi, out lambda, out h);
+                            modultransformacji.GaussKruger1(fi, lambda, lambda, out xGk, out yGk);
+                            modultransformacji.odczytBL(fi, lambda, out ksi, out eta);
+                            transformacjaTableAdapter.Insert(nazwaRover, X, Y, Z, fi, lambda, h, xGk, yGk, ksi, eta, null,
+                                null,
+                                null);
+                            czyjuż = false;
+                        }
+                        transformacjaTableAdapter.Fill(this.database1DataSet.Transformacja);
 
                     }
-                }
+                    }
+                    
+                
                 this.transformacjaTableAdapter.Fill(this.database1DataSet.Transformacja);
 
             }
@@ -217,11 +234,12 @@ namespace Inz
                           , beta, hi, hc);
                         var eta = (double) stRow["eta"];
                         var ksi = (double)stRow["ksi"];
+                        /*var temp=ksi;
+                        ksi = eta;
+                        eta = temp;*/
                         var ksirad = ksi * Math.PI / (180 * 60 * 60);
                        var  etarad = eta * Math.PI / (180 * 60 * 60);
-                       /* var temp=ksirad;
-                        ksirad = etarad;
-                        etarad = temp;*/
+                       
 
 
                         double B = Convert.ToDouble(stRow["B"]);
@@ -258,7 +276,7 @@ namespace Inz
                         });
                        
                         var wynik = R13.Transpose() * R2.Transpose() * R3.Transpose() * xyz;
-                        wektory2TableAdapter.Insert(stanowisko, cel, wynik[0, 0], wynik[1, 0], wynik[2, 0], "Klasyczne-wsp.przyb.", przyrosty.X, przyrosty.Y, przyrosty.H);
+                 //       wektory2TableAdapter.Insert(stanowisko, cel, wynik[0, 0], wynik[1, 0], wynik[2, 0], "Klasyczne-wsp.przyb.", przyrosty.X, przyrosty.Y, przyrosty.H);
                         
                         var X = wynik[0,0]+ sx;
                         var Y = wynik[1,0] + sy;
@@ -422,6 +440,24 @@ namespace Inz
                 var ksi = (double)stRow["ksi"];
                 var ksirad = ksi * Math.PI / (180 * 60 * 60);
                 var etarad = eta * Math.PI / (180 * 60 * 60);
+                var betaRad = beta*M.PI/200;
+                var azymutRad = azymut*M.PI/200;
+                var ms = Properties.Settings.Default.bladdlugosci1/1000000 +
+                         Properties.Settings.Default.bladdlugosci2/1000000*odl;
+                double  malfa = Properties.Settings.Default.bladkierunkucc/10000*M.PI/200, mbeta = malfa, mi = Properties.Settings.Default.bladwysantm/1000000, mj = mi;
+                var mx2 = M.Pow(M.Cos(azymutRad)*M.Sin(azymutRad), 2)*M.Pow(ms, 2) +
+                          M.Pow((-M.Sin(azymutRad)*M.Sin(betaRad)*odl), 2)*M.Pow(malfa, 2) +
+                          M.Pow(odl*M.Cos(azymutRad)*M.Cos(betaRad),2)*M.Pow(mbeta, 2);
+                var my2 = M.Pow(M.Sin(azymutRad) * M.Sin(azymutRad), 2) * M.Pow(ms, 2) +
+                          M.Pow((M.Cos(azymutRad) * M.Sin(betaRad) * odl), 2) * M.Pow(malfa, 2) +
+                          M.Pow(odl * M.Sin(azymutRad) * M.Cos(betaRad), 2) * M.Pow(mbeta, 2);
+                var mz2 = M.Pow(M.Cos(betaRad), 2)*M.Pow(ms, 2) + M.Pow(odl*-M.Sin(betaRad), 2)*M.Pow(mbeta, 2) + M.Pow(mi, 2) +
+                          M.Pow(mj, 2);
+                Matrix<double>bledy = DenseMatrix.OfArray(new double[,]
+                {
+                     { mx2,0,0},
+                     { 0,my2,0},
+                    { 0,0,mz2}});
 
 
                 Matrix<double> xyz = DenseMatrix.OfArray(new double[,] {
@@ -444,11 +480,25 @@ namespace Inz
                             {-Math.Sin(Lrad), Math.Cos(Lrad), 0},
                             {Math.Cos(Brad)*Math.Cos(Lrad), Math.Cos(Brad)*Math.Sin(Lrad), Math.Sin(Brad)}
                 });
-
+                
+                
                 var wynik = R13.Transpose() * R2.Transpose() * R3.Transpose() * xyz;
-                wektory2TableAdapter.Insert(stanowisko, cel, wynik[0, 0], wynik[1, 0], wynik[2, 0], "Klasyczne-obl.wekt.", przyrosty.X, przyrosty.Y, przyrosty.H);
+                var dlugosc = Math.Sqrt((Math.Pow(wynik[0, 0], 2) + Math.Pow(wynik[1, 0], 2)+ Math.Pow(wynik[2, 0], 2)));
+                var obrot1 = R3*R2*R13;
+                var obrot2 = R13.Transpose() * R2.Transpose() * R3.Transpose();
+                var wynikbledy = obrot1*bledy*obrot2;
+                var mx = M.Sqrt(wynikbledy[0, 0]);
+                var my = M.Sqrt( wynikbledy[1, 1]);
+                var mz = M.Sqrt(wynikbledy[2, 2]);
+                wektory2TableAdapter.Insert(stanowisko, cel, wynik[0, 0], wynik[1, 0], wynik[2, 0], "Klasyczne-obl.wekt.", przyrosty.X, przyrosty.Y, przyrosty.H,mx,my,mz,dlugosc);
                 
             }
+            foreach (DataRow row in database1DataSet.Wektory.Rows)
+            {
+                var dlugosc = Math.Sqrt((Math.Pow(Convert.ToDouble(row["DX"]), 2) + Math.Pow(Convert.ToDouble(row["DY"]), 2) + Math.Pow(Convert.ToDouble(row["DZ"]), 2)));
+                wektory2TableAdapter.Insert(row["poczatek"].ToString(), row["koniec"].ToString(), Convert.ToDouble(row["DX"]), Convert.ToDouble(row["DY"]), Convert.ToDouble(row["DZ"]),"RTKLib",null,null,null, Convert.ToDouble(row["sdx"]), Convert.ToDouble(row["sdy"]), Convert.ToDouble(row["sdz"]), dlugosc);
+            }
+
             this.wektory2TableAdapter.Fill(this.database1DataSet.Wektory2);
 
         }
@@ -478,6 +528,13 @@ namespace Inz
         private void twórzWektoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
             TworzWektory();
+        }
+
+        private void wektory2BindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.wektory2BindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.database1DataSet);
         }
     }
 }

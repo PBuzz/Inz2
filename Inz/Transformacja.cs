@@ -62,10 +62,13 @@ namespace Inz
                 alfa1 = alfa1 + 2 * Math.PI;
             azymut = alfa1 * 200 / Math.PI;
             var alfa2 =
-                Math.Atan((Math.Cos(U1) * Math.Sin(lambda)) /
+                Math.Atan2((Math.Cos(U1) * Math.Sin(lambda)) ,
                           (-Math.Sin(U1) * Math.Cos(U2) + Math.Cos(U1) * Math.Sin(U2) * Math.Cos(lambda)));
+            if (alfa2 < 0)
+                alfa2 = alfa2 + 2 * Math.PI;
+            double wynik=(alfa1+alfa2)/2;
 
-            alfa2 = alfa2 * 180 / Math.PI;
+            azymut = wynik * 200 / Math.PI;
 
         }
 
@@ -322,6 +325,7 @@ namespace Inz
                     var etawprawo = (dzetaprawo - dzetaPkt)/dPrawo*ro;
                     var etawlewo = (dzetaPkt - dzetalewo)/dLewo*ro;
                     eta = -(etawprawo + etawlewo)/2;
+
 
 
                 }

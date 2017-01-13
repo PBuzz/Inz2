@@ -107,8 +107,11 @@
             this.tableAdapterManager.DlugosciTableAdapter = null;
             this.tableAdapterManager.KatyTableAdapter = null;
             this.tableAdapterManager.PunktyNieznaneTableAdapter = this.punktyNieznaneTableAdapter;
+            this.tableAdapterManager.RinexTableAdapter = null;
             this.tableAdapterManager.TachimetrTableAdapter = null;
+            this.tableAdapterManager.TransformacjaTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Inz.Database1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.Wektory2TableAdapter = null;
             this.tableAdapterManager.WektoryTableAdapter = null;
             this.tableAdapterManager.WspolrzedneTableAdapter = null;
             // 
@@ -142,7 +145,7 @@
             this.punktyNieznaneBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.punktyNieznaneBindingNavigator.Name = "punktyNieznaneBindingNavigator";
             this.punktyNieznaneBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.punktyNieznaneBindingNavigator.Size = new System.Drawing.Size(862, 25);
+            this.punktyNieznaneBindingNavigator.Size = new System.Drawing.Size(1149, 25);
             this.punktyNieznaneBindingNavigator.TabIndex = 0;
             this.punktyNieznaneBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -199,7 +202,7 @@
             this.bindingNavigatorPositionItem.AccessibleName = "Pozycja";
             this.bindingNavigatorPositionItem.AutoSize = false;
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(65, 23);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Bieżąca pozycja";
             // 
@@ -294,9 +297,10 @@
             this.H});
             this.punktyNieznaneDataGridView.DataSource = this.punktyNieznaneBindingSource;
             this.punktyNieznaneDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.punktyNieznaneDataGridView.Location = new System.Drawing.Point(3, 3);
+            this.punktyNieznaneDataGridView.Location = new System.Drawing.Point(4, 4);
+            this.punktyNieznaneDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.punktyNieznaneDataGridView.Name = "punktyNieznaneDataGridView";
-            this.punktyNieznaneDataGridView.Size = new System.Drawing.Size(848, 524);
+            this.punktyNieznaneDataGridView.Size = new System.Drawing.Size(1133, 653);
             this.punktyNieznaneDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn2
@@ -364,9 +368,10 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView1.Location = new System.Drawing.Point(4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(848, 524);
+            this.dataGridView1.Size = new System.Drawing.Size(1133, 653);
             this.dataGridView1.TabIndex = 2;
             // 
             // tabControl1
@@ -376,18 +381,20 @@
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 25);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(862, 556);
+            this.tabControl1.Size = new System.Drawing.Size(1149, 690);
             this.tabControl1.TabIndex = 3;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.punktyNieznaneDataGridView);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(854, 530);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Size = new System.Drawing.Size(1141, 661);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Punkty do wyrównania";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -395,10 +402,11 @@
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.dataGridView1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(854, 530);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Size = new System.Drawing.Size(1141, 661);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Macierz A";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -406,10 +414,11 @@
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.dataGridView2);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(854, 530);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage3.Size = new System.Drawing.Size(1141, 661);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Współrzędne wyrównane";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -428,18 +437,20 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView2.Location = new System.Drawing.Point(4, 4);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(848, 524);
+            this.dataGridView2.Size = new System.Drawing.Size(1133, 653);
             this.dataGridView2.TabIndex = 0;
             // 
             // FormTest
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(862, 581);
+            this.ClientSize = new System.Drawing.Size(1149, 715);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.punktyNieznaneBindingNavigator);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormTest";
             this.Text = "Wyrównanie";
             this.Load += new System.EventHandler(this.FormTest_Load);

@@ -37,5 +37,17 @@
     <Setting Name="outputPath" Type="System.String" Scope="User">
       <Value Profile="(Default)">C:\Praca_Inz\rtklib Wyniki</Value>
     </Setting>
+    <Setting Name="bladcentrowaniam" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="bladwysantm" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="bladdlugosci1" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="bladdlugosci2" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

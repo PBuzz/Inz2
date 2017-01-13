@@ -93,6 +93,16 @@
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.wektory2BindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.wektory2DataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.x = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.y = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.z = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.transformacjaTableAdapter = new Inz.Database1DataSetTableAdapters.TransformacjaTableAdapter();
             this.tableAdapterManager = new Inz.Database1DataSetTableAdapters.TableAdapterManager();
             this.wektoryTableAdapter = new Inz.Database1DataSetTableAdapters.WektoryTableAdapter();
@@ -109,16 +119,6 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.x = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.y = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.z = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Wspolrzedne.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.transformacjaBindingNavigator)).BeginInit();
@@ -143,20 +143,22 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Wspolrzedne.Controls.Add(this.tabPage1);
             this.Wspolrzedne.Controls.Add(this.tabPage2);
-            this.Wspolrzedne.Location = new System.Drawing.Point(12, 38);
+            this.Wspolrzedne.Location = new System.Drawing.Point(16, 47);
+            this.Wspolrzedne.Margin = new System.Windows.Forms.Padding(4);
             this.Wspolrzedne.Name = "Wspolrzedne";
             this.Wspolrzedne.SelectedIndex = 0;
-            this.Wspolrzedne.Size = new System.Drawing.Size(1052, 571);
+            this.Wspolrzedne.Size = new System.Drawing.Size(1403, 703);
             this.Wspolrzedne.TabIndex = 0;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.transformacjaBindingNavigator);
             this.tabPage1.Controls.Add(this.transformacjaDataGridView);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1044, 545);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage1.Size = new System.Drawing.Size(1395, 674);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Współrzędne";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -181,14 +183,14 @@
             this.bindingNavigatorDeleteItem,
             this.transformacjaBindingNavigatorSaveItem,
             this.toolStripButton9});
-            this.transformacjaBindingNavigator.Location = new System.Drawing.Point(3, 3);
+            this.transformacjaBindingNavigator.Location = new System.Drawing.Point(4, 4);
             this.transformacjaBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.transformacjaBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.transformacjaBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
             this.transformacjaBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.transformacjaBindingNavigator.Name = "transformacjaBindingNavigator";
             this.transformacjaBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.transformacjaBindingNavigator.Size = new System.Drawing.Size(1038, 25);
+            this.transformacjaBindingNavigator.Size = new System.Drawing.Size(1387, 25);
             this.transformacjaBindingNavigator.TabIndex = 1;
             this.transformacjaBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -255,7 +257,7 @@
             this.bindingNavigatorPositionItem.AccessibleName = "Pozycja";
             this.bindingNavigatorPositionItem.AutoSize = false;
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(65, 23);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Bieżąca pozycja";
             // 
@@ -327,9 +329,10 @@
             this.dataGridViewTextBoxColumn10,
             this.dataGridViewTextBoxColumn11});
             this.transformacjaDataGridView.DataSource = this.transformacjaBindingSource;
-            this.transformacjaDataGridView.Location = new System.Drawing.Point(3, 31);
+            this.transformacjaDataGridView.Location = new System.Drawing.Point(4, 38);
+            this.transformacjaDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.transformacjaDataGridView.Name = "transformacjaDataGridView";
-            this.transformacjaDataGridView.Size = new System.Drawing.Size(1038, 508);
+            this.transformacjaDataGridView.Size = new System.Drawing.Size(1384, 625);
             this.transformacjaDataGridView.TabIndex = 0;
             // 
             // Id
@@ -436,10 +439,11 @@
             // 
             this.tabPage2.Controls.Add(this.wektory2BindingNavigator);
             this.tabPage2.Controls.Add(this.wektory2DataGridView);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1044, 545);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage2.Size = new System.Drawing.Size(1395, 674);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Wektory";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -463,7 +467,7 @@
             this.toolStripButton3,
             this.toolStripButton4,
             this.wektory2BindingNavigatorSaveItem});
-            this.wektory2BindingNavigator.Location = new System.Drawing.Point(3, 3);
+            this.wektory2BindingNavigator.Location = new System.Drawing.Point(4, 4);
             this.wektory2BindingNavigator.MoveFirstItem = this.toolStripButton5;
             this.wektory2BindingNavigator.MoveLastItem = this.toolStripButton8;
             this.wektory2BindingNavigator.MoveNextItem = this.toolStripButton7;
@@ -471,7 +475,7 @@
             this.wektory2BindingNavigator.Name = "wektory2BindingNavigator";
             this.wektory2BindingNavigator.PositionItem = this.toolStripTextBox1;
             this.wektory2BindingNavigator.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.wektory2BindingNavigator.Size = new System.Drawing.Size(1038, 25);
+            this.wektory2BindingNavigator.Size = new System.Drawing.Size(1387, 25);
             this.wektory2BindingNavigator.TabIndex = 1;
             this.wektory2BindingNavigator.Text = "bindingNavigator1";
             // 
@@ -533,7 +537,7 @@
             this.toolStripTextBox1.AccessibleName = "Pozycja";
             this.toolStripTextBox1.AutoSize = false;
             this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(50, 23);
+            this.toolStripTextBox1.Size = new System.Drawing.Size(65, 23);
             this.toolStripTextBox1.Text = "0";
             this.toolStripTextBox1.ToolTipText = "Bieżąca pozycja";
             // 
@@ -572,6 +576,7 @@
             this.wektory2BindingNavigatorSaveItem.Name = "wektory2BindingNavigatorSaveItem";
             this.wektory2BindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.wektory2BindingNavigatorSaveItem.Text = "Zapisz dane";
+            this.wektory2BindingNavigatorSaveItem.Click += new System.EventHandler(this.wektory2BindingNavigatorSaveItem_Click);
             // 
             // wektory2DataGridView
             // 
@@ -592,128 +597,11 @@
             this.y,
             this.z});
             this.wektory2DataGridView.DataSource = this.wektory2BindingSource;
-            this.wektory2DataGridView.Location = new System.Drawing.Point(6, 59);
+            this.wektory2DataGridView.Location = new System.Drawing.Point(8, 33);
+            this.wektory2DataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.wektory2DataGridView.Name = "wektory2DataGridView";
-            this.wektory2DataGridView.Size = new System.Drawing.Size(1042, 477);
+            this.wektory2DataGridView.Size = new System.Drawing.Size(1389, 627);
             this.wektory2DataGridView.TabIndex = 0;
-            // 
-            // transformacjaTableAdapter
-            // 
-            this.transformacjaTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.DlugosciTableAdapter = null;
-            this.tableAdapterManager.KatyTableAdapter = null;
-            this.tableAdapterManager.PunktyNieznaneTableAdapter = null;
-            this.tableAdapterManager.TachimetrTableAdapter = null;
-            this.tableAdapterManager.TransformacjaTableAdapter = this.transformacjaTableAdapter;
-            this.tableAdapterManager.UpdateOrder = Inz.Database1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.Wektory2TableAdapter = null;
-            this.tableAdapterManager.WektoryTableAdapter = null;
-            this.tableAdapterManager.WspolrzedneTableAdapter = null;
-            // 
-            // wektoryTableAdapter
-            // 
-            this.wektoryTableAdapter.ClearBeforeFill = true;
-            // 
-            // tachimetrTableAdapter
-            // 
-            this.tachimetrTableAdapter.ClearBeforeFill = true;
-            // 
-            // wektoryBindingSource
-            // 
-            this.wektoryBindingSource.DataMember = "Wektory";
-            this.wektoryBindingSource.DataSource = this.database1DataSet;
-            // 
-            // wektory2TableAdapter
-            // 
-            this.wektory2TableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager1
-            // 
-            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager1.DlugosciTableAdapter = null;
-            this.tableAdapterManager1.KatyTableAdapter = null;
-            this.tableAdapterManager1.PunktyNieznaneTableAdapter = null;
-            this.tableAdapterManager1.TachimetrTableAdapter = null;
-            this.tableAdapterManager1.TransformacjaTableAdapter = null;
-            this.tableAdapterManager1.UpdateOrder = Inz.Database1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager1.Wektory2TableAdapter = this.wektory2TableAdapter;
-            this.tableAdapterManager1.WektoryTableAdapter = null;
-            this.tableAdapterManager1.WspolrzedneTableAdapter = null;
-            // 
-            // menuStriptest2
-            // 
-            this.menuStriptest2.AllowMerge = false;
-            this.menuStriptest2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.pobierzWspółrzędneToolStripMenuItem,
-            this.obliczPrzybliżoneToolStripMenuItem,
-            this.szkicToolStripMenuItem,
-            this.twórzWektoryToolStripMenuItem,
-            this.zróbWszystkoToolStripMenuItem});
-            this.menuStriptest2.Location = new System.Drawing.Point(0, 0);
-            this.menuStriptest2.Name = "menuStriptest2";
-            this.menuStriptest2.Size = new System.Drawing.Size(1076, 24);
-            this.menuStriptest2.TabIndex = 1;
-            this.menuStriptest2.Text = "menuStrip1";
-            // 
-            // pobierzWspółrzędneToolStripMenuItem
-            // 
-            this.pobierzWspółrzędneToolStripMenuItem.Name = "pobierzWspółrzędneToolStripMenuItem";
-            this.pobierzWspółrzędneToolStripMenuItem.Size = new System.Drawing.Size(127, 20);
-            this.pobierzWspółrzędneToolStripMenuItem.Text = "Pobierz współrzędne";
-            this.pobierzWspółrzędneToolStripMenuItem.Click += new System.EventHandler(this.pobierzWspółrzędneToolStripMenuItem_Click);
-            // 
-            // obliczPrzybliżoneToolStripMenuItem
-            // 
-            this.obliczPrzybliżoneToolStripMenuItem.Name = "obliczPrzybliżoneToolStripMenuItem";
-            this.obliczPrzybliżoneToolStripMenuItem.Size = new System.Drawing.Size(115, 20);
-            this.obliczPrzybliżoneToolStripMenuItem.Text = "Oblicz przybliżone";
-            this.obliczPrzybliżoneToolStripMenuItem.Click += new System.EventHandler(this.obliczPrzybliżoneToolStripMenuItem_Click);
-            // 
-            // szkicToolStripMenuItem
-            // 
-            this.szkicToolStripMenuItem.Name = "szkicToolStripMenuItem";
-            this.szkicToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
-            this.szkicToolStripMenuItem.Text = "Szkic";
-            this.szkicToolStripMenuItem.Click += new System.EventHandler(this.szkicToolStripMenuItem_Click);
-            // 
-            // twórzWektoryToolStripMenuItem
-            // 
-            this.twórzWektoryToolStripMenuItem.Name = "twórzWektoryToolStripMenuItem";
-            this.twórzWektoryToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
-            this.twórzWektoryToolStripMenuItem.Text = "Twórz wektory";
-            this.twórzWektoryToolStripMenuItem.Click += new System.EventHandler(this.twórzWektoryToolStripMenuItem_Click);
-            // 
-            // zróbWszystkoToolStripMenuItem
-            // 
-            this.zróbWszystkoToolStripMenuItem.Name = "zróbWszystkoToolStripMenuItem";
-            this.zróbWszystkoToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
-            this.zróbWszystkoToolStripMenuItem.Text = "Zrób wszystko";
-            this.zróbWszystkoToolStripMenuItem.Click += new System.EventHandler(this.zróbWszystkoToolStripMenuItem_Click);
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripProgressBar1,
-            this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 599);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1076, 22);
-            this.statusStrip1.TabIndex = 2;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // toolStripProgressBar1
-            // 
-            this.toolStripProgressBar1.Name = "toolStripProgressBar1";
-            this.toolStripProgressBar1.Size = new System.Drawing.Size(250, 16);
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
             // 
             // dataGridViewTextBoxColumn15
             // 
@@ -788,16 +676,139 @@
             this.z.HeaderText = "z";
             this.z.Name = "z";
             // 
+            // transformacjaTableAdapter
+            // 
+            this.transformacjaTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.DlugosciTableAdapter = null;
+            this.tableAdapterManager.KatyTableAdapter = null;
+            this.tableAdapterManager.PunktyNieznaneTableAdapter = null;
+            this.tableAdapterManager.RinexTableAdapter = null;
+            this.tableAdapterManager.TachimetrTableAdapter = null;
+            this.tableAdapterManager.TransformacjaTableAdapter = this.transformacjaTableAdapter;
+            this.tableAdapterManager.UpdateOrder = Inz.Database1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.Wektory2TableAdapter = null;
+            this.tableAdapterManager.WektoryTableAdapter = null;
+            this.tableAdapterManager.WspolrzedneTableAdapter = null;
+            // 
+            // wektoryTableAdapter
+            // 
+            this.wektoryTableAdapter.ClearBeforeFill = true;
+            // 
+            // tachimetrTableAdapter
+            // 
+            this.tachimetrTableAdapter.ClearBeforeFill = true;
+            // 
+            // wektoryBindingSource
+            // 
+            this.wektoryBindingSource.DataMember = "Wektory";
+            this.wektoryBindingSource.DataSource = this.database1DataSet;
+            // 
+            // wektory2TableAdapter
+            // 
+            this.wektory2TableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager1
+            // 
+            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager1.DlugosciTableAdapter = null;
+            this.tableAdapterManager1.KatyTableAdapter = null;
+            this.tableAdapterManager1.PunktyNieznaneTableAdapter = null;
+            this.tableAdapterManager1.RinexTableAdapter = null;
+            this.tableAdapterManager1.TachimetrTableAdapter = null;
+            this.tableAdapterManager1.TransformacjaTableAdapter = null;
+            this.tableAdapterManager1.UpdateOrder = Inz.Database1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager1.Wektory2TableAdapter = this.wektory2TableAdapter;
+            this.tableAdapterManager1.WektoryTableAdapter = null;
+            this.tableAdapterManager1.WspolrzedneTableAdapter = null;
+            // 
+            // menuStriptest2
+            // 
+            this.menuStriptest2.AllowMerge = false;
+            this.menuStriptest2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pobierzWspółrzędneToolStripMenuItem,
+            this.obliczPrzybliżoneToolStripMenuItem,
+            this.szkicToolStripMenuItem,
+            this.twórzWektoryToolStripMenuItem,
+            this.zróbWszystkoToolStripMenuItem});
+            this.menuStriptest2.Location = new System.Drawing.Point(0, 0);
+            this.menuStriptest2.Name = "menuStriptest2";
+            this.menuStriptest2.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.menuStriptest2.Size = new System.Drawing.Size(1435, 24);
+            this.menuStriptest2.TabIndex = 1;
+            this.menuStriptest2.Text = "menuStrip1";
+            // 
+            // pobierzWspółrzędneToolStripMenuItem
+            // 
+            this.pobierzWspółrzędneToolStripMenuItem.Name = "pobierzWspółrzędneToolStripMenuItem";
+            this.pobierzWspółrzędneToolStripMenuItem.Size = new System.Drawing.Size(127, 20);
+            this.pobierzWspółrzędneToolStripMenuItem.Text = "Pobierz współrzędne";
+            this.pobierzWspółrzędneToolStripMenuItem.Click += new System.EventHandler(this.pobierzWspółrzędneToolStripMenuItem_Click);
+            // 
+            // obliczPrzybliżoneToolStripMenuItem
+            // 
+            this.obliczPrzybliżoneToolStripMenuItem.Name = "obliczPrzybliżoneToolStripMenuItem";
+            this.obliczPrzybliżoneToolStripMenuItem.Size = new System.Drawing.Size(115, 20);
+            this.obliczPrzybliżoneToolStripMenuItem.Text = "Oblicz przybliżone";
+            this.obliczPrzybliżoneToolStripMenuItem.Click += new System.EventHandler(this.obliczPrzybliżoneToolStripMenuItem_Click);
+            // 
+            // szkicToolStripMenuItem
+            // 
+            this.szkicToolStripMenuItem.Name = "szkicToolStripMenuItem";
+            this.szkicToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
+            this.szkicToolStripMenuItem.Text = "Szkic";
+            this.szkicToolStripMenuItem.Click += new System.EventHandler(this.szkicToolStripMenuItem_Click);
+            // 
+            // twórzWektoryToolStripMenuItem
+            // 
+            this.twórzWektoryToolStripMenuItem.Name = "twórzWektoryToolStripMenuItem";
+            this.twórzWektoryToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
+            this.twórzWektoryToolStripMenuItem.Text = "Twórz wektory";
+            this.twórzWektoryToolStripMenuItem.Click += new System.EventHandler(this.twórzWektoryToolStripMenuItem_Click);
+            // 
+            // zróbWszystkoToolStripMenuItem
+            // 
+            this.zróbWszystkoToolStripMenuItem.Name = "zróbWszystkoToolStripMenuItem";
+            this.zróbWszystkoToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
+            this.zróbWszystkoToolStripMenuItem.Text = "Zrób wszystko";
+            this.zróbWszystkoToolStripMenuItem.Click += new System.EventHandler(this.zróbWszystkoToolStripMenuItem_Click);
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripProgressBar1,
+            this.toolStripStatusLabel1});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 738);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(1435, 26);
+            this.statusStrip1.TabIndex = 2;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripProgressBar1
+            // 
+            this.toolStripProgressBar1.Name = "toolStripProgressBar1";
+            this.toolStripProgressBar1.Size = new System.Drawing.Size(333, 20);
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 21);
+            // 
             // FormTest2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1076, 621);
+            this.ClientSize = new System.Drawing.Size(1435, 764);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.Wspolrzedne);
             this.Controls.Add(this.menuStriptest2);
             this.DoubleBuffered = true;
             this.MainMenuStrip = this.menuStriptest2;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormTest2";
             this.Text = "FormTest2";
             this.Load += new System.EventHandler(this.FormTest2_Load);

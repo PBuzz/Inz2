@@ -157,5 +157,53 @@ namespace Inz.Properties {
                 this["outputPath"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("10")]
+        public int bladcentrowaniam {
+            get {
+                return ((int)(this["bladcentrowaniam"]));
+            }
+            set {
+                this["bladcentrowaniam"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("5")]
+        public int bladwysantm {
+            get {
+                return ((int)(this["bladwysantm"]));
+            }
+            set {
+                this["bladwysantm"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("5")]
+        public int bladdlugosci1 {
+            get {
+                return ((int)(this["bladdlugosci1"]));
+            }
+            set {
+                this["bladdlugosci1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("5")]
+        public int bladdlugosci2 {
+            get {
+                return ((int)(this["bladdlugosci2"]));
+            }
+            set {
+                this["bladdlugosci2"] = value;
+            }
+        }
     }
 }

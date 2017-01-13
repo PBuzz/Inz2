@@ -26,6 +26,9 @@ namespace Inz
             tBrtklib.Text = ust.rtklibPath.ToString();
             tBoutput.Text = ust.outputPath.ToString();
             propertyGrid1.SelectedObject = Properties.Settings.Default;
+            nUDdlugosc2.Value = (int) ust.bladdlugosci2;
+            nuddlugosc1.Value = (int) ust.bladdlugosci1;
+            nUDwys.Value = (int) ust.bladwysantm;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -52,6 +55,9 @@ namespace Inz
             Properties.Settings.Default.rtklibPath = tBrtklib.Text;
             Properties.Settings.Default.config = tBConfig.Text;
             Properties.Settings.Default.outputPath = tBoutput.Text;
+            Properties.Settings.Default.bladdlugosci2=(int)nUDdlugosc2.Value;
+            Properties.Settings.Default.bladdlugosci1 = (int)nuddlugosc1.Value ;
+            Properties.Settings.Default.bladwysantm = (int) nUDwys.Value ;
         }
 
         private void textBox4_DoubleClick(object sender, EventArgs e)

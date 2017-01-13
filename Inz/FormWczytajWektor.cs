@@ -7,6 +7,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -14,14 +15,18 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using MathNet.Numerics.Statistics;
+
 
 namespace Inz
 {
     public partial class FormWczytajWektor : Form
     {
+        
         public FormWczytajWektor()
         {
             InitializeComponent();
+
         }
         public DataTable dt;
 
@@ -70,31 +75,33 @@ namespace Inz
                     flag2 = true; //potrzeban do wyboru insert w adapterze
                 }
                 string wiersz;
-                double DX = 0, DY = 0, DZ = 0;
+                double X = 0, Y = 0, Z = 0, ratio = 0;
                 double sumasdx = 0, sumasdy = 0, sumasdz = 0, sumasdxy = 0, sumasdyz = 0, sumasdzx = 0, sumaratio = 0;
                 int i = 0;
                 int n = 0;
-
+                double xbaza = 0, ybaza = 0, zbaza = 0, DX = 0, DY = 0, DZ = 0;
+                List<double> ratiolist = new List<double>();
 
                 while ((wiersz = sr.ReadLine()) != null)
                 {
-                    toolStripProgressBar1.Increment(1);
                     if (flag1)
                     {
 
                         if (Convert.ToInt32(new string(wiersz.ToCharArray(71, 1))) == 1)
                         {
                             wiersz = wiersz.Replace(".", ",");
-                            DX += Convert.ToDouble(new string(wiersz.ToCharArray(26, 15)));
-                            DY += Convert.ToDouble(new string(wiersz.ToCharArray(41, 15)));
-                            DZ += Convert.ToDouble(new string(wiersz.ToCharArray(56, 15)));
+                            X += Convert.ToDouble(new string(wiersz.ToCharArray(26, 15)));
+                            Y += Convert.ToDouble(new string(wiersz.ToCharArray(41, 15)));
+                            Z += Convert.ToDouble(new string(wiersz.ToCharArray(56, 15)));
                             sumasdx += Convert.ToDouble(new string(wiersz.ToCharArray(79, 7)));
                             sumasdy += Convert.ToDouble(new string(wiersz.ToCharArray(88, 7)));
                             sumasdz += Convert.ToDouble(new string(wiersz.ToCharArray(97, 7)));
                             sumasdxy += Convert.ToDouble(new string(wiersz.ToCharArray(106, 7)));
                             sumasdyz += Convert.ToDouble(new string(wiersz.ToCharArray(115, 7)));
                             sumasdzx += Convert.ToDouble(new string(wiersz.ToCharArray(124, 7)));
-                            sumaratio += Convert.ToDouble(new string(wiersz.ToCharArray(139, 5)));
+                            ratio += Convert.ToDouble(new string(wiersz.ToCharArray(139, 5)));
+                            sumaratio += ratio;
+                            ratiolist.Add(ratio);
                             i++;
                         }
                         else
@@ -108,30 +115,43 @@ namespace Inz
                     {
                         flag1 = true;
                     }
+                    if (wiersz.Contains("% ref pos"))
+                    {
+                        wiersz = wiersz.Replace('.', ',');
+                        xbaza = Convert.ToDouble(wiersz.Substring(14, 14));
+                        ybaza = Convert.ToDouble(wiersz.Substring(28, 14));
+                        zbaza = Convert.ToDouble(wiersz.Substring(42, 13));
+                    }
+
 
                 }
-                DX = DX/i;
-                DY = DY/i;
-                DZ = DZ/i;
-                var sdx = Math.Sqrt(Math.Pow(sumasdx, 2)/i);
-                var sdy = Math.Sqrt(Math.Pow(sumasdy, 2)/i);
-                var sdz = Math.Sqrt(Math.Pow(sumasdz, 2)/i);
-                var sdxy = Math.Sqrt(Math.Pow(sumasdxy, 2)/i);
-                var sdyz = Math.Sqrt(Math.Pow(sumasdyz, 2)/i);
-                var sdzx = Math.Sqrt(Math.Pow(sumasdzx, 2)/i);
-                var ratio = sumaratio/i;
-                var index = wektoryBindingSource.Count;
+                X = X / i;
+                Y = Y / i;
+                Z = Z / i;
+                DX = X - xbaza;
+                DY = Y - ybaza;
+                DZ = Z - zbaza;
+                var sdx = Math.Sqrt(Math.Pow(sumasdx, 2) / i);
+                var sdy = Math.Sqrt(Math.Pow(sumasdy, 2) / i);
+                var sdz = Math.Sqrt(Math.Pow(sumasdz, 2) / i);
+                var sdxy = Math.Sqrt(Math.Pow(sumasdxy, 2) / i);
+                var sdyz = Math.Sqrt(Math.Pow(sumasdyz, 2) / i);
+                var sdzx = Math.Sqrt(Math.Pow(sumasdzx, 2) / i);
+                var ratiosr = sumaratio / i;
+                double fixedprocent = (double)i / (double)(i + n);
+                var ratiomin = ratiolist.Minimum();
+                var ratiomax = ratiolist.Maximum();
+
                 if (flag2)
                 {
-                    wektoryTableAdapter.Insert(poczatek, koniec, DX, DY, DZ, sdx, sdy, sdz, sdxy, sdyz, sdzx, ratio,
-                        file, i, n);
+                    wektoryTableAdapter.Insert(poczatek, koniec, X, Y, Z, sdx, sdy, sdz, sdxy, sdyz, sdzx, ratiosr,
+                       file, i, n, DX, DY, DZ, ratiomin, ratiomax, fixedprocent, null);
                 }
                 else
                 {
-                    wektoryTableAdapter.Insert(null, null, DX, DY, DZ, sdx, sdy, sdz, sdxy, sdyz, sdzx, ratio, file, i,
-                        n);
+                    wektoryTableAdapter.Insert(null, null, X, Y, Z, sdx, sdy, sdz, sdxy, sdyz, sdzx, ratio, file, i,
+                        n, DX, DY, DZ, ratiomin, ratiomax, fixedprocent, null);
                 }
-                wczytaj.Text = "Wczytaj";
 
             }
         }
@@ -167,61 +187,35 @@ namespace Inz
             if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
                 e.RowIndex >= 0)
             {
+                var indez = e.RowIndex;
+                string sciezka = wektoryDataGridView.Rows[indez].Cells["sciezka"].Value.ToString();
+               
+                
+                var rtBotworz = new FormOtworzRTB();
+                rtBotworz.Show();
+                rtBotworz.MdiParent = this.MdiParent;
+                rtBotworz.Text = "Podgląd";
+                rtBotworz.richTextBox1.Lines = CzytajPlikTekst(sciezka);
+            }
+        }
 
-                openFileDialog1.Multiselect = false;
-                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+        public static string[] CzytajPlikTekst(string nazwaPliku)
+        {
+            var tekst = new List<string>();
+            try
+            {
+                using (var sr = new StreamReader(nazwaPliku))
                 {
-                    bool flag1 = false;
-                    using (var sr = new StreamReader(openFileDialog1.FileName))
-                    {
-                        var sciezka = Regex.Split(openFileDialog1.FileName,@"\\");
-                        string nazwapliku = sciezka.Last();
-                        var skladowe = nazwapliku.Split('-');
-                        if(skladowe.Length == 2)
-                        {
-                            var drugi = skladowe[1].Split('.' );//obcina rozszerzenie
-                            wektoryDataGridView.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn2"].Value = skladowe[0];
-                            wektoryDataGridView.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn3"].Value = drugi[0];
-                        }
-                        string wiersz;
-                        double DX=0, DY=0, DZ = 0;
-                        int i = 0;
-                        while ((wiersz = sr.ReadLine()) != null)
-                        {
-                            if (flag1)
-                            {
-                                if (Convert.ToInt32(new string(wiersz.ToCharArray(71, 1))) == 1)
-                                {
-                                    wiersz = wiersz.Replace(".", ",");
-                                     DX += Convert.ToDouble(new string(wiersz.ToCharArray(26, 15)));
-                                     DY += Convert.ToDouble(new string(wiersz.ToCharArray(41, 15)));
-                                     DZ += Convert.ToDouble(new string(wiersz.ToCharArray(56, 15)));
-                                    i++;
-                                }
-                               
-
-                            }
-
-                            if (wiersz.Contains("%  GPST"))
-                            {
-                                flag1 = true;
-                            }
-
-                        }
-                        var index = e.RowIndex;
-                        if (i>0)
-                        {
-                            //wektoryTableAdapter.Insert(null, null, DX, DY, DZ);
-                            wektoryDataGridView.Rows[index].Cells["DX"].Value = DX/i;
-                            wektoryDataGridView.Rows[index].Cells["DY"].Value = DY/i;
-                            wektoryDataGridView.Rows[index].Cells["DZ"].Value = DZ/i;
-                            this.Validate();
-                            this.wektoryBindingSource.EndEdit();
-                            this.tableAdapterManager.UpdateAll(this.database1DataSet);
-                        }
-                    }
-                    wektoryTableAdapter.Fill(database1DataSet.Wektory);
+                    string wiersz;
+                    while ((wiersz = sr.ReadLine()) != null)
+                        tekst.Add(wiersz);
                 }
+                return tekst.ToArray();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Błąd " + e);
+                return null;
             }
         }
 
@@ -263,10 +257,12 @@ namespace Inz
             }
             wektoryTableAdapter.Fill(database1DataSet.Wektory);
         }
+      //  [DllImport("user32.dll", CharSet = CharSet.Unicode)]
+        //public static extern int SetParrent(IntPtr hwc,IntPtr hwp);
         void LaunchCommandLineApp(string rover ,string base1,string navbase,string output)
         {
-
-            string @program = @Properties.Settings.Default.rtklibPath;
+            
+        string @program = @Properties.Settings.Default.rtklibPath;
              @rover = rover.Replace(@"\\", @"\");
             string @baza = base1.Replace(@"\\", @"\");
             string @nav = @navbase.Replace(@"\\", @"\");
@@ -280,13 +276,15 @@ namespace Inz
             startInfo.FileName = program;
             startInfo.WindowStyle = ProcessWindowStyle.Normal;
             startInfo.Arguments = @arguments;
+            
             try
             {
-
+               
                 // Start the process with the info we specified.
                 // Call WaitForExit and then the using statement will close.
                 using (Process exeProcess = Process.Start(startInfo))
                 {
+                   // SetParrent(exeProcess.MainWindowHandle, this.Handle);
                     exeProcess.WaitForExit();
                     //exeProcess.WaitForExit();
                 }
@@ -297,5 +295,49 @@ namespace Inz
             }
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            {
+                Form ustawienia = new FormKonfigRTKLib();
+                ustawienia.MdiParent = this.MdiParent;
+                ustawienia.Show();
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form stworz = new FormTworzWektor();
+            stworz.MdiParent = this.MdiParent;
+           stworz.Show();
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            this.wektoryTableAdapter.Fill(this.database1DataSet.Wektory);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.wspolrzedneTableAdapter.Fill(database1DataSet.Wspolrzedne);
+            this.wektoryTableAdapter.Fill(database1DataSet.Wektory);
+            foreach (DataRow row in database1DataSet.Wektory.Rows)
+            {
+                string nazwaBaza = row["poczatek"].ToString();
+                string nazwaRover = row["koniec"].ToString();
+               
+                var DX = Convert.ToDouble(row["DX"]);
+                var DY = Convert.ToDouble(row["DY"]) ;
+                var DZ = Convert.ToDouble(row["DZ"]) ;
+                double mx = Convert.ToDouble(row["sdx"]);
+                double my = Convert.ToDouble(row["sdy"]);
+                double mz = Convert.ToDouble(row["sdz"]);
+                mx = Math.Pow(mx, 2);
+                my = Math.Pow(my, 2);
+                mz = Math.Pow(mz, 2);
+                var dlugosc = Math.Sqrt(Math.Pow(DX, 2) + Math.Pow(DY, 2) + Math.Pow(DZ, 2));
+                wektory2TableAdapter1.Insert(nazwaBaza, nazwaRover, DX, DY, DZ, "GPS", null, null, null,mx,my,mz,dlugosc);
+            }
+
+        }
     }
 }
